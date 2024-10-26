@@ -13,7 +13,7 @@ author = "alastair"
 after_dark_menu = [
     {url = "$BASE_URL", name = "home"},
     {url = "$BASE_URL/about", name = "about"},
-    {url = "$BASE_URL/recipes", name = "recipes"}
+    {url = "$BASE_URL/recipes", name = "recipes"},
     {url = "$BASE_URL/categories", name = "Categories"},
     {url = "$BASE_URL/tags", name = "Tags"},
 ]
