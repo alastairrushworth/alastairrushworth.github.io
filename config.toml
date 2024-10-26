@@ -11,13 +11,16 @@ taxonomies = [
 [extra]
 author = "alastair"
 after_dark_menu = [
-    {url = "$BASE_URL/posts", name = "home"},
+    {url = "$BASE_URL", name = "home"},
     {url = "$BASE_URL/about", name = "about"},
     {url = "$BASE_URL/recipes", name = "recipes"},
-    {url = "$BASE_URL/categories", name = "Categories"},
-    {url = "$BASE_URL/tags", name = "Tags"},
 ]
 after_dark_title = "My blog"
 
 [search]
 index_format = "elasticlunr_javascript"
+
+[markdown]
+highlight_code = true
+highlight_theme = "custom_gruvbox"
+extra_syntaxes_and_themes = ["syntaxes", "highlight_themes"]
