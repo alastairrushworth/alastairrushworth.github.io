@@ -1,9 +1,7 @@
-base_url = "https://getzola.github.io/after-dark/"
+base_url = "https://alasatirrushworth.github.io/"
 compile_sass = true
-title = "after-dark theme"
-description = "A robust, elegant dark theme"
-
-
+title = "alastair rushworth"
+description = "A blog about data science and other things"
 
 taxonomies = [
     {name = "categories", feed = true},
