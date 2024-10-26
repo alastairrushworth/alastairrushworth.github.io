@@ -29,7 +29,7 @@ These types of techniques provide a first look at the data and answer important 
 
 > When you claim to “grok” some knowledge or technique, you are asserting that you have not merely learned it in a detached instrumental way but that it has become part of you, part of your identity.
 >
->[‘grok’, The Jargon File](http://www.catb.org/~esr/jargon/html/G/grok.html)
+> [‘grok’, The Jargon File](http://www.catb.org/~esr/jargon/html/G/grok.html)
 
 I’ve totally made up the heading, but I think it’s by far the most important role of EDA and is mostly what the rest of this post is about. There is a sort of myth of the data analyst as a robotic processor of data, who is detached and passive. The reality is completely the opposite, where better data analysis will always come from an analyst with a deep understanding of the data and the processes that generated it. EDA has a crucial role in turning a data frame from a contextless collection of bytes into a meaningful representation of a physical process, transitioning the analyst from the passive processor to an expert with deeply internalised understanding of an area. This end state is intangible and qualitative because it happens completely in your own head. Consequently, this part of the EDA will be a creative and personal journey that is supported by a continuing internal conversation that probes and revisits your understanding of the broader context.
 
@@ -61,10 +61,10 @@ If you frequently fit predictive models, you’ll be aware of the risks of overf
 
 A related problem that frequently arises in machine learning projects is where EDA is run as a preliminary step before creating training and test splits. If the result of EDA influences your model choices (it nearly always will if done properly), then you’ve potentially reduced your test set’s ability to measure true out-of-sample error. So before you do anything, create a hygienic environment for your EDA by splitting your data, so that you don’t accidentally leak information from your test set into your model.
 
->Creativity and the pitfalls of the data frame API
->This was the tendency of jobs to be adapted to tools, rather than adapting tools to jobs.
+> Creativity and the pitfalls of the data frame API
+> This was the tendency of jobs to be adapted to tools, rather than adapting tools to jobs.
 
->[Silvan Tomkins](https://en.wikipedia.org/wiki/Silvan_Tomkins), Computer Simulation of Personality: Frontier of Psychological Theory (1963)
+> [Silvan Tomkins](https://en.wikipedia.org/wiki/Silvan_Tomkins), Computer Simulation of Personality: Frontier of Psychological Theory (1963)
 
 Almost all data analysis now begins with some form of data frame — a tabular data format with columns of mixed types, where each row is a record. In Python and R, data analysis tooling has coalesced around the data frame object, which has been a huge convenience and productivity boost for the analyst. I wouldn’t for a second debate that this hasn’t been a positive development, but there is a risk here that EDA, because of the ease and uniformity of use of the tooling, becomes an exercise in applying boilerplate code. This creates a hidden creativity trap where the analysis can become narrowed by the range of uses supported by a particular set of tools. While such tools are extremely powerful when they are genuinely supporting you to develop your understanding of the data narrative, it’s important to avoid becoming too reliant on any single tool.
 
@@ -77,12 +77,12 @@ Like all good blog posts, my thinking on EDA began on Twitter. In the process, [
 
 [This article by the Farnham Street blog](https://fs.blog/how-to-read-a-book/) summarises four levels of critical reading, originally proposed by Mortimer Adler. The final most analytical form of interrogation, called synotopical or comparative reading, hits on some of the themes I’ve discussed already:
 
->This task is undertaken by identifying relevant passages, translating the terminology, framing and ordering the questions that need answering, defining the issues, and having a conversation with the responses.
+> This task is undertaken by identifying relevant passages, translating the terminology, framing and ordering the questions that need answering, defining the issues, and having a conversation with the responses.
+> 
+> The goal is not to achieve an overall understanding of any particular book, but rather to understand the subject and develop a deep fluency.
+> 
+> This is all about identifying and filling in your knowledge gaps.
 >
->The goal is not to achieve an overall understanding of any particular book, but rather to understand the subject and develop a deep fluency.
->
->This is all about identifying and filling in your knowledge gaps.
->
->Farnham Street blog, [How to Read a Book: The Ultimate Guide by Mortimer Adler](https://fs.blog/how-to-read-a-book/)
+> Farnham Street blog, [How to Read a Book: The Ultimate Guide by Mortimer Adler](https://fs.blog/how-to-read-a-book/)
 
 Sounds familiar doesn’t it? Asking questions (of yourself), contextualising and framing, closing knowledge gaps and achieving fluency are all key parts of a successful EDA. What I’m most excited about here is that we can draw on the analytical framework of an existing and well-established discipline, as scaffolding to think about how we can make improvements to the way we teach and practice EDA. Again, full credit to Jesse for this idea.
