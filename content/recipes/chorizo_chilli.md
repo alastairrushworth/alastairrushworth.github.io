@@ -1,4 +1,6 @@
-## Chorizo Chilli
++++
+title = "Chorizo Chilli"
++++
 
 ### Ingredients
 

@@ -1,4 +1,6 @@
-## Veggie fajitas
++++
+title = "Veggie Fajitas"
++++
 
 ### Ingredients
 

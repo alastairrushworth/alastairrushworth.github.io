@@ -1,4 +1,6 @@
-## Christmas cake
++++
+title = "Christmas Cake"
++++
 
 ### Ingredients
 
