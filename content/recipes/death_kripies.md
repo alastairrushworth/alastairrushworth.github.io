@@ -2,7 +2,7 @@
 title = "Death Krispies"
 +++
 
-### Ingredients
+# Ingredients
 
 - 200g Rice Krispies
 - 200g butter
@@ -10,7 +10,7 @@ title = "Death Krispies"
 - 200g toffees (hard dairy ones)
 - 600g chocolate
 
-### Method
+# Method
 
 1. Put butter, toffees and marshmallows in a large pan and gently melt.
 2. Once melted, take off the heat, add the Rice Krispies and mix gently until all the Krispies are coated.
