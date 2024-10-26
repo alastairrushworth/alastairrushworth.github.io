@@ -1,4 +1,6 @@
-## Death Krispies
++++
+title = "Death Krispies"
++++
 
 ### Ingredients
 
