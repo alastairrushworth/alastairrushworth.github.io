@@ -1,5 +1,8 @@
 +++
 title = "Veggie Fajitas"
+
+[taxonomies]
+categories = ["recipe"]
 +++
 
 ### Ingredients
