@@ -1,19 +1,20 @@
 +++
 title = "Bread Salad"
+has_toc = true
 +++
 
-### Ingredients
+# Ingredients
 
-- 200 g part-baked ciabatta bread
-- 400 g ripe mixed tomatoes, roughly chopped
-- 280 g roasted peppers in olive oil, drained and roughly chopped
-- 8 anchovy fillets in olive oil, drained, optional
-- 2 tbsp red wine vinegar
-- 3 tbsp olive oil
-- bunch fresh basil
-- salt and freshly ground black pepper
+* 200 g part-baked ciabatta bread
+* 400 g ripe mixed tomatoes, roughly chopped
+* 280 g roasted peppers in olive oil, drained and roughly chopped
+* 8 anchovy fillets in olive oil, drained, optional
+* 2 tbsp red wine vinegar
+* 3 tbsp olive oil
+* bunch fresh basil
+* salt and freshly ground black pepper
 
-### Method
+# Method
 
 - Tear bread into small pieces, toast in the oven until lightly brown.
 - Prep veggies in a big salad bowl.
