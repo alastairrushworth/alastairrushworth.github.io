@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>alastair rushworth - exploratory data analysis</title>
+    <subtitle>A blog about data science and other things</subtitle>
+    <link href="https://alastairrushworth.github.io/categories/exploratory-data-analysis/atom.xml" rel="self" type="application/atom+xml"/>
+    <link href="https://alastairrushworth.github.io/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2017-09-24T00:00:00+00:00</updated>
+    <id>https://alastairrushworth.github.io/categories/exploratory-data-analysis/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Exploratory Data Analysis: what’s the point?</title>
+        <published>2017-09-24T00:00:00+00:00</published>
+        <updated>2017-09-24T00:00:00+00:00</updated>
+        <author>
+          <name>Unknown</name>
+        </author>
+        <link rel="alternate" href="https://alastairrushworth.github.io/eda/" type="text/html"/>
+        <id>https://alastairrushworth.github.io/eda/</id>
+        
+        <summary type="html">&lt;p&gt;Exploratory data analysis or EDA is one of the most important but difficult to codify parts of the data science toolkit. True exploratory analysis is without a sharply definable objective and evades being formalised into a set of clear steps. Despite this, EDA is used in at least a few very typical ways that connect to downstream tasks like data cleaning and hypothesis generation. But perhaps most importantly, it’s an integral part of how we learn to frame our thinking as data scientists. This post attempts to offer some perspective on the less-discussed ways in which EDA develops our contextual understanding of a data analysis.&lt;&#x2F;p&gt;
+</summary>
+        
+    </entry>
+</feed>
