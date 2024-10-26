@@ -1,6 +1,5 @@
 +++
 title = "Bread Salad"
-has_toc = true
 +++
 
 # Ingredients
