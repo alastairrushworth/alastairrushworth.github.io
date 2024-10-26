@@ -1,5 +1,8 @@
 +++
 title = "Death Krispies"
+
+[taxonomies]
+categories = ["recipe"]
 +++
 
 # Ingredients
