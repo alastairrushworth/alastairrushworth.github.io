@@ -1,8 +1,9 @@
 +++
 title = "Veggie Fajitas"
+date = "2024-06-14"
 
 [taxonomies]
-categories = ["recipe"]
+tags=["documentation"]
 +++
 
 ### Ingredients

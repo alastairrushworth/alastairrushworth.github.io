@@ -1,5 +1,6 @@
 +++
 title = "Bread Salad"
+date = "2024-06-14"
 +++
 
 # Ingredients
