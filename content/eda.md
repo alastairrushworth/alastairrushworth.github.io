@@ -3,7 +3,7 @@ title = "Exploratory Data Analysis: what’s the point?"
 date = 2017-09-24
 
 [taxonomies]
-categories = ["Data Science", "Exploratory Data Analysis"]
+categories = ["data science", "exploratory data analysis"]
 +++
 
 
