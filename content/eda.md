@@ -1,9 +1,9 @@
 +++
-title = "What is Gutenberg"
+title = "Exploratory Data Analysis: what’s the point?"
 date = 2017-09-24
 
 [taxonomies]
-categories = ["Hello world"]
+categories = ["Data Science", "Exploratory Data Analysis"]
 +++
 
 
