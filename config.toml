@@ -1,23 +1,47 @@
 base_url = "https://alastairrushworth.github.io/"
-compile_sass = true
 title = "alastair rushworth"
-description = "A blog about data science and other things"
+description = "a blog about data science and other things"
+build_search_index = true
+generate_feeds = true
+compile_sass = true
+minify_html = true
+taxonomies = [{ name = "tags" }]
 
-taxonomies = [
-    {name = "categories", feed = true},
-    {name = "tags", feed = true},
-]
+[markdown]
+highlight_code = true
+highlight_theme = "ayu-light"
 
 [extra]
-author = "alastair"
-after_dark_menu = [
-    {url = "$BASE_URL", name = "home"},
-    {url = "$BASE_URL/about", name = "about"},
-    {url = "$BASE_URL/recipes", name = "recipes"},
-    {url = "$BASE_URL/categories", name = "categories"},
-    {url = "$BASE_URL/tags", name = "tags"},
-]
-after_dark_title = "My blog"
+toc = true
+use_cdn = false
+favicon = "/icon/favicon.png"
+theme = "toggle"              # light, dark, auto, toggle
+fancy_code = true
+dynamic_note = true           # a note that can be toggled
+mathjax = true
+mathjax_dollar_inline_enable = true
+repo_url = "https://github.com/not-matthias/apollo/tree/main/content"
 
-[search]
-index_format = "elasticlunr_javascript"
+menu = [
+    { name = "/posts", url = "/posts", weight = 1 },
+    { name = "/projects", url = "/projects", weight = 2 },
+    { name = "/about", url = "/about", weight = 3 },
+    { name = "/recipes", url = "/recipes", weight = 4 },
+]
+
+socials = [
+    { name = "github", url = "https://github.com/alastairrushworth/", icon = "github" },
+]
+
+custom_css = []
+
+[extra.analytics]
+enabled = false
+
+[extra.analytics.goatcounter]
+user = "your_user"
+host = "example.com" # default= goatcounter.com
+
+[extra.analytics.umami]
+website_id = "43929cd1-1e83...."
+host_url = "https://stats.mywebsite.com" # default: https://analytics.eu.umami.is

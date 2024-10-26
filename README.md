@@ -1,87 +1,71 @@
-# after-dark
+# apollo
 
-![after-dark screenshot](https://github.com/getzola/after-dark/blob/master/screenshot.png?raw=true)
+Modern and minimalistic blog theme powered by [Zola](https://getzola.org). See a live preview [here](https://not-matthias.github.io/apollo).
 
-## Contents
+<sub><sup>Named after the greek god of knowledge, wisdom and intellect</sup></sub>
 
-- [Installation](#installation)
-- [Options](#options)
-  - [Top menu](#top-menu)
-  - [Title](#title)
-  - [Author](#author)
+<details open>
+  <summary>Dark theme</summary>
+
+  ![blog-dark](./screenshot-dark.png)
+</details>
+
+<details>
+  <summary>Light theme</summary>
+
+![blog-light](./screenshot.png)
+</details>
+
+## Features
+
+- [X] Pagination
+- [X] Themes (light, dark, auto)
+- [X] Projects page
+- [X] Analytics using [GoatCounter](https://www.goatcounter.com/) / [Umami](https://umami.is/)
+- [x] Social Links
+- [x] MathJax Rendering
+- [x] Taxonomies
+- [x] Meta Tags For Individual Pages
+- [x] Custom homepage
+- [x] Comments
+- [ ] Search
+- [ ] Categories
 
 ## Installation
-First download this theme to your `themes` directory:
 
-```bash
-cd themes
-git clone https://github.com/getzola/after-dark.git
+1. Download the theme
 ```
-and then enable it in your `config.toml`:
-
-```toml
-theme = "after-dark"
+git submodule add https://github.com/not-matthias/apollo themes/apollo
 ```
 
-This theme requires your index section (`content/_index.md`) to be paginated to work:
+2. Add the following to the top of your `config.toml`
 
 ```toml
-paginate_by = 5
-```
-
-The posts should therefore be in directly under the `content` folder.
-
-The theme requires tags and categories taxonomies to be enabled in your `config.toml`:
-
-```toml
-taxonomies = [
-    # You can enable/disable RSS
-    {name = "categories", feed = true},
-    {name = "tags", feed = true},
-]
-```
-If you want to paginate taxonomies pages, you will need to overwrite the templates
-as it only works for non-paginated taxonomies by default.
-
-
-## Options
-
-### Top-menu
-Set a field in `extra` with a key of `after_dark_menu`:
-
-```toml
-after_dark_menu = [
-    {url = "$BASE_URL", name = "Home"},
-    {url = "$BASE_URL/categories", name = "Categories"},
-    {url = "$BASE_URL/tags", name = "Tags"},
-    {url = "https://google.com", name = "Google"},
-]
-```
-
-If you put `$BASE_URL` in a url, it will automatically be replaced by the actual
-site URL.
-
-### Title
-The site title is shown on the homepage. As it might be different from the `<title>`
-element that the `title` field in the config represents, you can set the `after_dark_title`
-instead.
-
-### Author
-You can set this on a per page basis or in the config file.
-
-`config.toml`:
-```toml
-[extra]
-author = "John Smith"
-```
-In a page (wrap this in +++):
-```toml
-title = "..."
-date = 1970-01-01
+theme = "apollo"
+taxonomies = [{ name = "tags" }]
 
 [extra]
-author = "John Smith"
+theme = "auto"
+socials = [
+  # Configure socials here
+]
+menu = [
+  # Configure menu bar here
+]
+
+# See this for more options: https://github.com/not-matthias/apollo/blob/main/config.toml#L14
 ```
 
-## Original
-This template is based on the Hugo template https://git.habd.as/comfusion/after-dark
+3. Copy the example content
+
+```
+cp -r themes/apollo/content/* content/
+```
+
+## Configuration
+
+You can find all the configuration options [here](./content/posts/configuration.md)
+
+## References
+
+This theme is based on [archie-zola](https://github.com/XXXMrG/archie-zola/).
