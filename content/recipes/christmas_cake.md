@@ -1,6 +1,9 @@
 +++
 title = "Christmas Cake"
 date = "2024-06-14"
+
+[taxonomies]
+tags=["recipes"]
 +++
 
 # Ingredients
