@@ -6,7 +6,6 @@ generate_feeds = true
 compile_sass = true
 minify_html = true
 taxonomies = [{ name = "tags" }]
-index_format = "elasticlunr_javascript"
 
 [markdown]
 highlight_code = true
