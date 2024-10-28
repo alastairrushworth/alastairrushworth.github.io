@@ -1,6 +1,9 @@
 +++
 title = "Brownies"
 date = "2024-06-14"
+
+[taxonomies]
+tags=["recipes"]
 +++
 
 # Ingredients
