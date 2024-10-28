@@ -3,10 +3,10 @@ title = "Veggie Fajitas"
 date = "2024-06-14"
 
 [taxonomies]
-tags=["documentation"]
+tags=["recipes"]
 +++
 
-### Ingredients
+# Ingredients
 
 - 400g can black beans, drained
 - small bunch coriander, finely chopped
@@ -24,7 +24,7 @@ For the fajita mix
 - ½ tsp ground cumin
 - 1 lime, juiced
 
-### Method
+# Method
 
 1. To make the fajita mix, take two or three strips from each colour of pepper and finely chop them. Set aside. Heat the oil in a frying pan and fry the remaining pepper strips and the onion until soft and starting to brown at the edges. Cool slightly and mix in the chopped raw peppers. Add the garlic and cook for 1 min, then add the spices and stir. Cook for a couple of mins more until the spices become aromatic, then add half the lime juice and season. Transfer to a dish, leaving any juices behind, and keep warm.
 

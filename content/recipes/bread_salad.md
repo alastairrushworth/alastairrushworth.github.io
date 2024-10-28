@@ -1,6 +1,9 @@
 +++
 title = "Bread Salad"
 date = "2024-06-14"
+
+[taxonomies]
+tags=["recipes"]
 +++
 
 # Ingredients
@@ -16,8 +19,8 @@ date = "2024-06-14"
 
 # Method
 
-- Tear bread into small pieces, toast in the oven until lightly brown.
-- Prep veggies in a big salad bowl.
-- Prep dressing in a small bowl.
-- Add bread to the salad bowl.
-- Pour dressing over the salad, mix well and let it sit for 5 - 10 minutes.
+1. Tear bread into small pieces, toast in the oven until lightly brown.
+2. Prep veggies in a big salad bowl.
+3. Prep dressing in a small bowl.
+4. Add bread to the salad bowl.
+5. Pour dressing over the salad, mix well and let it sit for 5 - 10 minutes.

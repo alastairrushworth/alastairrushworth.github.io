@@ -3,7 +3,7 @@ title = "Death Krispies"
 date = "2024-06-14"
 
 [taxonomies]
-tags=["documentation"]
+tags=["recipes"]
 +++
 
 # Ingredients
