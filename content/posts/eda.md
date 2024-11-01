@@ -5,12 +5,13 @@ date = "2024-06-14"
 tags=["documentation"]
 +++
 
-
 Exploratory data analysis or EDA is one of the most important but difficult to codify parts of the data science toolkit. True exploratory analysis is without a sharply definable objective and evades being formalised into a set of clear steps. Despite this, EDA is used in at least a few very typical ways that connect to downstream tasks like data cleaning and hypothesis generation. But perhaps most importantly, it’s an integral part of how we learn to frame our thinking as data scientists. This post attempts to offer some perspective on the less-discussed ways in which EDA develops our contextual understanding of a data analysis.
 
 <!-- more -->
 
 # EDA for checking, validation and cleaning
+
+![alt text](eda_1.png)
 
 Let’s get the obvious stuff out of the way first. Where a rough analysis plan is already in place, and some data has been assembled to support the analysis, a type of EDA serves to identify potential issues that might require remedial work before progressing. This is probably the most common type of exploratory analysis and is more closely linked to the goals of data cleaning than pure analysis and insight. This a big topic and I won’t attempt an exhaustive list here, but instead will describe a few of the most common tasks.
 
