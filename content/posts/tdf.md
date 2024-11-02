@@ -5,12 +5,14 @@ date = "2022-10-17"
 tags=["r", "visualisation", "data science", "cycling"]
 +++
 
-# The Tour de France — a short primer
+The [Tour de France (‘Le Tour’)](https://en.wikipedia.org/wiki/Tour_de_France) is the world’s biggest and most prestigious cycling event with a long history spanning back as far as 1903. Each annual ‘edition’ of the race is composed of around 21 stages that traverse the French nation, each stage is a standalone race by itself. The racing is complex, with each team of 9 riders competing for any combination of individual stage wins, sprint points, mountain climbing, aggressive riding and team ability. The most coveted prize of all is the ‘Generale Classification’ (GC) which is awarded to the rider with the lowest aggregate time at the end of the race. Each day, the rider with the lowest aggregate time following the previous stage wears the ‘Maillot Jaune’ (yellow jersey) indicating that they are the current race leader.
 
-The Tour de France (‘Le Tour’) is the world’s biggest and most prestigious cycling event with a long history spanning back as far as 1903. Each annual ‘edition’ of the race is composed of around 21 stages that traverse the French nation, each stage is a standalone race by itself. The racing is complex, with each team of 9 riders competing for any combination of individual stage wins, sprint points, mountain climbing, aggressive riding and team ability. The most coveted prize of all is the ‘Generale Classification’ (GC) which is awarded to the rider with the lowest aggregate time at the end of the race. Each day, the rider with the lowest aggregate time following the previous stage wears the ‘Maillot Jaune’ (yellow jersey) indicating that they are the current race leader.
+<!-- more -->
 
-# tdf an R package for Tour de France data
-The tdf package is hosted on github and contains information about the overall winning rider for each edition of the race, the winner’s biographical information and the results for each stage in each edition. To install the package, use
+
+# `tdf` - an R package for Tour de France data
+
+The `tdf` package is [hosted on github](https://github.com/alastairrushworth/tdf) and contains information about the overall winning rider for each edition of the race, the winner’s biographical information and the results for each stage in each edition. To install the package, use
 
 ```r
 library(remotes)
@@ -48,22 +50,29 @@ glimpse(editions)
 ## $ stage_results <named list> [[<tbl_df[37 x 7]>, <tbl_df[35 x 7]>, <tbl_df[27…
 ```
 
-editions is a tibble whose rows each correspond to a single edition of the Tour de France. The columns contain information about the race itself and the overall winner, including:
+`editions` is a tibble whose rows each correspond to a single edition of the Tour de France. The columns contain information about the race itself and the overall winner, including:
 
-distance is the aggregate distance in kilometres covered by the entire race.
-time_overall is the time in hours taken by the winner to complete the race
-time_margin is the difference in finishing times between the race winner and the first runner up.
-stage_wins is the number of stages won by the eventual winner during the edition (note that it is possible to win the GC without winning any stages at all).
-stages_led is the number of stages spent as the race leader (wearing the yellow jersey) by the eventual winner.
-weight is the winner’s body weight in kilograms.
-height is the winner’s height in meters.
-stage_results is a column containing a list of lists. Each element contains a list of stage results for a particular edition of the Tour de France.
-How has the race changed over time?
+- `distance` is the aggregate distance in kilometres covered by the entire race.
+- `time_overall` is the time in hours taken by the winner to complete the race
+- `time_margin` is the difference in finishing times between the race winner and the first runner up.
+- `stage_wins` is the number of stages won by the eventual winner during the edition (note that it is possible to win the GC without winning any stages at all).
+- `stages_led` is the number of stages spent as the race leader (wearing the yellow jersey) by the eventual winner.
+- `weight` is the winner’s body weight in kilograms.
+- `height` is the winner’s height in meters.
+- `stage_results` is a column containing a list of lists. Each element contains a list of stage results for a particular edition of the Tour de France.
+
+## How has the race changed over time?
+
 Forget ultra-marathons and tough mudder, early editions of Le Tour were really tough. Riders were mostly self-supported, rode in woollen jerseys for hundreds of miles per day on steel-framed bicycles. The longest stage in Tour history was 482 kilometres (Stage 5, 1919) — the stage winner, Jean Alavoine, took almost 19 hours to complete the stage.
 
 
-Robert Jacquinot taking a break from the 482km long Stage 5 during the 1922 Tour de France. (Image source: Wikipedia.)
-To get a sense for how the length of the race has varied since 1903, we can visualise the total distance in the editions data:
+<figure style="text-align: center;">
+    <img src="/images/tdf_2.webp" alt="drawing" width="600"/>
+    <figcaption>Robert Jacquinot taking a break from the 482km long Stage 5 during the 1922 Tour de France. (Image source: Wikipedia.)</figcaption>
+</figure>
+
+
+To get a sense for how the length of the race has varied since 1903, we can visualise the total `distance` in the editions data:
 
 ```r
 library(ggplot2)
@@ -76,6 +85,10 @@ editions %>%
   ggtitle('Tour de France total distance covered over time') + 
   theme(legend.position = "none")
 ```
+
+<div style="text-align: center;">
+    <img src="/images/tdf_7.webp" alt="drawing" width="700" style="display: block; margin: 0 auto;"/>
+</div>
 
 It’s pretty clear that over time, the distances covered have decreased dramatically, and have roughly stabilised at about 3500 kilometres during the last 2 decades (still a huge distance). You can see that the longest ever Tour de France edition was in 1926, with a total distance covered of 5,745 kilometres!
 
@@ -97,6 +110,10 @@ editions %>%
   theme(legend.position = "none")
 ```
 
+<div style="text-align: center;">
+    <img src="/images/tdf_6.webp" alt="drawing" width="700" style="display: block; margin: 0 auto;"/>
+</div>
+
 They’re going pretty fast. It looks like while the race has been getting gradually shorter, the speeds have been getting much faster. The change also coincides with professionalisation of the sport, better equipment and smarter training so it’s hard to provide an exact account for the change in speed. It’s worth highlighting the top two fastest average speeds in Tour de France history:
 
 # Top 5 average speeds of Tour de France winners
@@ -116,12 +133,18 @@ editions %>%
 ## # … with 104 more rows
 ```
 
-The two fastest ever editions of the Tour de France were won by Marco Pantani (in 1998) and Lance Armstrong (in 2005), both of whom were later stripped of these (and other) wins for their use of banned performance-enhancing substances. The speed of doped riders in such Tour editions was so obviously faster than non-doped riders, that French media declared a culture of “Cyclisme a deux vitesses” (“two-speed cycling”). It is unknown how much riders still use banned substances for performance enhancement, but the average speeds of the Pantani / Armstrong years have not been reached in any edition since.
+The two fastest ever editions of the Tour de France were won by Marco Pantani (in 1998) and Lance Armstrong (in 2005), both of whom were later stripped of these (and other) wins for their use of banned performance-enhancing substances. The speed of doped riders in such Tour editions was so obviously faster than non-doped riders, that French media declared a culture of _“Cyclisme a deux vitesses”_ (_“two-speed cycling”_). It is unknown how much riders still use banned substances for performance enhancement, but the average speeds of the Pantani / Armstrong years have not been reached in any edition since.
 
-Note: the the data in the tdf package retains the winning times of banned, disqualified and otherwise sanctioned riders for the purposes of data analysis. The overall standings are as they would have appeared on the final day of the race - therefore please note that the officially recognised winner of a particular edition may not be the rider with the fastest time.
+Note: the the data in the `tdf` package retains the winning times of banned, disqualified and otherwise sanctioned riders for the purposes of data analysis. The overall standings are as they would have appeared on the final day of the race - therefore please note that the officially recognised winner of a particular edition may not be the rider with the fastest time.
 
 # How have the riders changed over time?
-France is a mountainous country, and a crucial ingredient for success in the Tour de France is a rider’s ability to climb hills quickly and efficiently. Hill climbing is a fight against gravity that pits a rider’s strength against their total weight (bike + equipment + body). The rider has two options to improve: get stronger and get leaner. Using the editions data we can explore the latter over time by using rider height and weight data to calculate body mass index (BMI), which is a (very rough) proxy for leanness.
+
+France is a mountainous country, and a crucial ingredient for success in the Tour de France is a rider’s ability to climb hills quickly and efficiently. Hill climbing is a fight against gravity that pits a rider’s strength against their total weight (bike + equipment + body). The rider has two options to improve: get stronger and get leaner. Using the `editions` data we can explore the latter over time by using rider `height` and `weight` data to calculate body mass index (BMI), which is a (very rough) proxy for leanness.
+
+
+<div style="text-align: center;">
+    <img src="/images/tdf_5.png" alt="drawing" width="400" style="display: block; margin: 0 auto;"/>
+</div>
 
 ```r
 library(ggrepel)
@@ -139,11 +162,15 @@ editions %>%
   theme(legend.position = "none")
 ```
 
+<div style="text-align: center;">
+    <img src="/images/tdf_4.webp" alt="drawing" width="700" style="display: block; margin: 0 auto;"/>
+</div>
+
 It’s pretty clear that over time, the trend has been towards winners having lower BMI, and likely being leaner overall. Apart from the obvious issues with BMI as a metric (body shapes are more complex than just height and weight) it’s interesting to consider why this trend has occurred. It’s tempting to conclude that more careful dieting and preparation in recent years has lead to riders having lower body fat percentages, which can enhance a rider’s power to weight ratio and overall performance. However, it could also be due to changes in the race: if race winning becomes more dependent on performance in the mountains (for example, because the number of mountain stages has increased overall) this could result in the lighter and leaner athletes tending to excel overall.
 
 # Stage results
 
-The column stage_results contains the breakdown of results by stage for each edition of the Tour de France. For example, the results of the final stage of the 2019 Tour de France can be printed using
+The column `stage_results` contains the breakdown of results by stage for each edition of the Tour de France. For example, the results of the final stage of the 2019 Tour de France can be printed using
 
 ```r
 editions$stage_results$`2019`$`stage-21`
@@ -161,15 +188,16 @@ editions$stage_results$`2019`$`stage-21`
 ##  9     9 0S       Arndt Nikias         142    27 Team Sunweb         14 3H 4M 8S
 ## 10    10 0S       Sagan Peter           11    29 BORA - hansgro…     10 3H 4M 8S
 ## # … with 145 more rows
-The important columns for the stage data are
 ```
-
-time the finishing time of the stage winner and time difference to the winner.
-rider the rider name formatted as ‘Surname Forename’.
-age age of the rider at the start of the stage.
-elapsed the time taken to reach the finish line - this is stored as a lubridate::period object for easier printing and manipulation.
+The important columns for the stage data are
+- `time` the finishing time of the stage winner and time difference to the winner.
+- `rider` the rider name formatted as ‘Surname Forename’.
+- `age` age of the rider at the start of the stage.
+- `elapsed` the time taken to reach the finish line - this is stored as a `lubridate::period` object for easier printing and manipulation.
 
 In the case above, Caleb Ewan won the finish line sprint of the final stage. Since the first 53 riders were part of a contiguous group of riders, they were granted the same finishing time as Ewan, but their finishing order corresponds to the order they passed the finish line.
 
-
-Caleb Ewan wins the sprint on stage 21 of the 2019 Tour de France. (Image source: AFP/Getty Images)
+<figure style="text-align: center;">
+    <img src="/images/tdf_3.webp" alt="drawing" width="600"/>
+    <figcaption>Caleb Ewan wins the sprint on stage 21 of the 2019 Tour de France. (Image source: AFP/Getty Images)</figcaption>
+</figure>
