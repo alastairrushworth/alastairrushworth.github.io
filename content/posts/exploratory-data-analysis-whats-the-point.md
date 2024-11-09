@@ -1,13 +1,12 @@
 +++
 title = "Exploratory Data Analysis: what’s the point?"
+description = "A perspective on the less-discussed ways in which EDA develops our contextual understanding of a data analysis"
 date = "2020-05-12"
 [taxonomies]
 tags=["r", "eda", "data science"]
 +++
 
 Exploratory data analysis or EDA is one of the most important but difficult to codify parts of the data science toolkit. True exploratory analysis is without a sharply definable objective and evades being formalised into a set of clear steps. Despite this, EDA is used in at least a few very typical ways that connect to downstream tasks like data cleaning and hypothesis generation. But perhaps most importantly, it’s an integral part of how we learn to frame our thinking as data scientists. This post attempts to offer some perspective on the less-discussed ways in which EDA develops our contextual understanding of a data analysis.
-
-<!-- more -->
 
 <div style="text-align: center;">
     <img src="/images/eda_1.png" alt="drawing" width="700" style="display: block; margin: 0 auto;"/>

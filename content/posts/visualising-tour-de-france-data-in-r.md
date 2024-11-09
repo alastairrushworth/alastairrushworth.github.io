@@ -1,5 +1,6 @@
 +++
 title = "Visualising Tour De France Data In R"
+description = "Exploring the `tdf` package for Tour de France data"
 date = "2022-10-17"
 [taxonomies]
 tags=["r", "visualisation", "data science", "cycling"]
