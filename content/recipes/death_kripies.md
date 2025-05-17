@@ -11,7 +11,7 @@ tags=["recipes"]
 - 200g Rice Krispies
 - 200g butter
 - 200g marshmallows
-- 200g toffees (hard dairy ones)
+- 200g hard dairy toffees
 - 600g chocolate
 
 # Method
