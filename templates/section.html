@@ -1,1 +1,37 @@
 {% extends "index.html" %}
+
+{% block title %}{{ section.title }} | {{ config.title }}{% endblock title %}
+
+{% block content %}
+    <div class="posts">
+        {% for page in section.pages %}
+            <article class="post">
+                <h2 class="post__title">
+                    <a href="{{ page.permalink }}">
+                        {{ page.title }}
+                    </a>
+                </h2>
+                {% if page.date %}
+                <div class="post__meta">
+                    <span class="post__time">{{ page.date | date(format="%Y-%m-%d") }}</span>
+                    {% if page.taxonomies.tags %}
+                        <div class="post__tags">
+                            {% for tag in page.taxonomies.tags %}
+                                <a href="{{ get_taxonomy_url(kind="tags", name=tag) }}">{{ tag }}</a>
+                            {% endfor %}
+                        </div>
+                    {% endif %}
+                </div>
+                {% endif %}
+                {% if page.summary %}
+                <div class="post__summary">
+                    {{ page.summary | safe }}
+                </div>
+                <div class="read-more">
+                    <a href="{{ page.permalink }}">Read more...</a>
+                </div>
+                {% endif %}
+            </article>
+        {% endfor %}
+    </div>
+{% endblock content %}

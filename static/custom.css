@@ -2,23 +2,23 @@
 
 /* Make headings smaller */
 .post-content h1 {
-  font-size: 1.8em !important;
+  font-size: 1.5em !important;
 }
 
 .post-content h2 {
-  font-size: 1.6em !important;
+  font-size: 1.3em !important;
 }
 
 .post-content h3 {
-  font-size: 1.4em !important;
-}
-
-.post-content h4 {
   font-size: 1.2em !important;
 }
 
-.post-content h5, .post-content h6 {
+.post-content h4 {
   font-size: 1.1em !important;
+}
+
+.post-content h5, .post-content h6 {
+  font-size: 1em !important;
 }
 
 /* Make post title smaller */
