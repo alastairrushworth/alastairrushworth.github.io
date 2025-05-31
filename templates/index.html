@@ -101,24 +101,28 @@
             <main>
                 <div class="content" id="mobile-panel">
                     {% block content %}
+                        {% if section.content %}
+                            <div class="intro">
+                                {{ section.content | safe }}
+                            </div>
+                        {% endif %}
                         <div class="posts">
-                            {% for page in paginator.pages %}
-                                {% if page.title != "About" %}
+                            {% set posts_section = get_section(path="posts/_index.md") %}
+                            {% for page in posts_section.pages %}
                                 <article class="post">
-                                    {{ post_macros::title(page=page) }}
-                                    <!-- Removed post summary and read more link -->
+                                    <h2 class="post__title">
+                                        <a href="{{ page.permalink }}">
+                                            {{ page.title }}
+                                        </a>
+                                    </h2>
+                                    {% if page.date %}
+                                    <div class="post__meta">
+                                        <span class="post__time">{{ page.date | date(format="%Y-%m-%d") }}</span>
+                                    </div>
+                                    {% endif %}
                                 </article>
-                                {% endif %}
                             {% endfor %}
                         </div>
-                        <nav class="pagination">
-                            {% if paginator.previous %}
-                                <a class="previous" href="{{ paginator.previous }}">‹ Previous</a>
-                            {% endif %}
-                            {% if paginator.next %}
-                                <a class="next" href="{{ paginator.next }}">Next ›</a>
-                            {% endif %}
-                        </nav>
                     {% endblock content %}
                 </div>
             </main>
