@@ -19,10 +19,6 @@ jobs:
     - uses: actions/checkout@v3
       
     - name: Build and deploy
-      uses: shalzz/zola-deploy-action@v0.17.2
+      uses: shalzz/zola-deploy-action@master
       env:
-        # This uses the standard GitHub token provided by GitHub Actions
         GITHUB_TOKEN: ${{ secrets.GHPAT}}
-        # Make sure the base_url matches your GitHub Pages URL
-        PAGES_BRANCH: gh-pages
-        BUILD_DIR: .
