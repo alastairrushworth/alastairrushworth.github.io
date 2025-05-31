@@ -3,10 +3,11 @@ title = "Brownies"
 date = "2024-06-14"
 
 [taxonomies]
-tags=["recipes"]
+tags=["recipes", "dessert"]
+categories=["Recipes"]
 +++
 
-# Ingredients
+## Ingredients
 
 * 120g dark chocolate
 * 80g butter
@@ -21,7 +22,7 @@ tags=["recipes"]
 * 0.5 tsp instant coffee granules 
 
 
-# Method
+## Method
 
 1. Heat oven to 170C/150C fan/gas 31⁄2. Grease and line a 20cm square tin with greaseproof paper.
 2. Melt chocolate, coffee and butter with 60ml water on a low heat.

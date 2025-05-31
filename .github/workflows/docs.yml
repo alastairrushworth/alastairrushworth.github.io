@@ -10,15 +10,16 @@ concurrency:
   group: "pages"
   cancel-in-progress: true
 
-
 jobs:
   build:
     runs-on: ubuntu-latest
     
     steps:
     - uses: actions/checkout@v3
-      
+      with:
+        submodules: recursive
+    
     - name: Build and deploy
       uses: shalzz/zola-deploy-action@master
       env:
-        GITHUB_TOKEN: ${{ secrets.GHPAT}}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

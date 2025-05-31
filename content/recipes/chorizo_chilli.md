@@ -6,7 +6,7 @@ date = "2024-06-14"
 tags=["recipes"]
 +++
 
-# Ingredients
+## Ingredients
 
 - 110g chorizo sliced
 - 500g minced beef
@@ -20,7 +20,7 @@ tags=["recipes"]
 - freshly ground black pepper (to taste)
 - chopped fresh coriander to serve (optional)
 
-# Method
+## Method
 
 1. Fry chorizo in a large saucepan for a few mins.
 2. Add the mince, fry until broken up.

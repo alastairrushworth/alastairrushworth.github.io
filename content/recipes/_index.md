@@ -1,7 +1,8 @@
 +++
-paginate_by = 7
 title = "Recipes"
 sort_by = "date"
-
-insert_anchor_links = "heading"
+paginate_by = 5
+template = "section.html"
 +++
+
+A collection of my favorite recipes!

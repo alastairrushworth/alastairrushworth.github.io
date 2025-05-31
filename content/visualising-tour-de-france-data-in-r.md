@@ -11,7 +11,7 @@ The [Tour de France (‘Le Tour’)](https://en.wikipedia.org/wiki/Tour_de_Franc
 <!-- more -->
 
 
-# `tdf` - an R package for Tour de France data
+## `tdf` - an R package for Tour de France data
 
 The `tdf` package is [hosted on github](https://github.com/alastairrushworth/tdf) and contains information about the overall winning rider for each edition of the race, the winner’s biographical information and the results for each stage in each edition. To install the package, use
 
@@ -25,7 +25,7 @@ The package is just a container for the dataframe editions:
 ```r
 library(tdf)
 library(tidyverse)
-# visualise contents tdf::editions
+## visualise contents tdf::editions
 glimpse(editions)
 ## Observations: 106
 ## Variables: 20
@@ -62,7 +62,7 @@ glimpse(editions)
 - `height` is the winner’s height in meters.
 - `stage_results` is a column containing a list of lists. Each element contains a list of stage results for a particular edition of the Tour de France.
 
-## How has the race changed over time?
+### How has the race changed over time?
 
 Forget ultra-marathons and tough mudder, early editions of Le Tour were really tough. Riders were mostly self-supported, rode in woollen jerseys for hundreds of miles per day on steel-framed bicycles. The longest stage in Tour history was 482 kilometres (Stage 5, 1919) — the stage winner, Jean Alavoine, took almost 19 hours to complete the stage.
 
@@ -117,7 +117,7 @@ editions %>%
 
 They’re going pretty fast. It looks like while the race has been getting gradually shorter, the speeds have been getting much faster. The change also coincides with professionalisation of the sport, better equipment and smarter training so it’s hard to provide an exact account for the change in speed. It’s worth highlighting the top two fastest average speeds in Tour de France history:
 
-# Top 5 average speeds of Tour de France winners
+## Top 5 average speeds of Tour de France winners
 
 ```r
 editions %>%
@@ -138,7 +138,7 @@ The two fastest ever editions of the Tour de France were won by Marco Pantani (i
 
 Note: the the data in the `tdf` package retains the winning times of banned, disqualified and otherwise sanctioned riders for the purposes of data analysis. The overall standings are as they would have appeared on the final day of the race - therefore please note that the officially recognised winner of a particular edition may not be the rider with the fastest time.
 
-# How have the riders changed over time?
+## How have the riders changed over time?
 
 France is a mountainous country, and a crucial ingredient for success in the Tour de France is a rider’s ability to climb hills quickly and efficiently. Hill climbing is a fight against gravity that pits a rider’s strength against their total weight (bike + equipment + body). The rider has two options to improve: get stronger and get leaner. Using the `editions` data we can explore the latter over time by using rider `height` and `weight` data to calculate body mass index (BMI), which is a (very rough) proxy for leanness.
 
@@ -169,7 +169,7 @@ editions %>%
 
 It’s pretty clear that over time, the trend has been towards winners having lower BMI, and likely being leaner overall. Apart from the obvious issues with BMI as a metric (body shapes are more complex than just height and weight) it’s interesting to consider why this trend has occurred. It’s tempting to conclude that more careful dieting and preparation in recent years has lead to riders having lower body fat percentages, which can enhance a rider’s power to weight ratio and overall performance. However, it could also be due to changes in the race: if race winning becomes more dependent on performance in the mountains (for example, because the number of mountain stages has increased overall) this could result in the lighter and leaner athletes tending to excel overall.
 
-# Stage results
+## Stage results
 
 The column `stage_results` contains the breakdown of results by stage for each edition of the Tour de France. For example, the results of the final stage of the 2019 Tour de France can be printed using
 

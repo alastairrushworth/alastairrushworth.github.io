@@ -6,7 +6,7 @@ date = "2024-06-14"
 tags=["recipes"]
 +++
 
-# Ingredients
+## Ingredients
 
 * 200 g part-baked ciabatta bread
 * 400 g ripe mixed tomatoes, roughly chopped
@@ -17,7 +17,7 @@ tags=["recipes"]
 * bunch fresh basil
 * salt and freshly ground black pepper
 
-# Method
+## Method
 
 1. Tear bread into small pieces, toast in the oven until lightly brown.
 2. Prep veggies in a big salad bowl.
