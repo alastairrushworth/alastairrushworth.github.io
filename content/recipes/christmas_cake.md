@@ -6,7 +6,7 @@ date = "2024-06-14"
 tags=["recipes"]
 +++
 
-# Ingredients
+## Ingredients
 
 - 450g raisins
 - 450g sultanas
@@ -21,7 +21,7 @@ tags=["recipes"]
 - 1/2 tsp mixed spice
 - 1/2 tsp ground cinnamon
 
-# Method
+## Method
 
 1. Preheat the oven to 150C.
 2. Line a 9" round cake tin.

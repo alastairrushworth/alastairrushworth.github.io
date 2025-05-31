@@ -4,6 +4,7 @@ description = "A perspective on the less-discussed ways in which EDA develops ou
 date = "2020-05-12"
 [taxonomies]
 tags=["r", "eda", "data science"]
+categories=["Data Science"]
 +++
 
 Exploratory data analysis or EDA is one of the most important but difficult to codify parts of the data science toolkit. True exploratory analysis is without a sharply definable objective and evades being formalised into a set of clear steps. Despite this, EDA is used in at least a few very typical ways that connect to downstream tasks like data cleaning and hypothesis generation. But perhaps most importantly, it’s an integral part of how we learn to frame our thinking as data scientists. This post attempts to offer some perspective on the less-discussed ways in which EDA develops our contextual understanding of a data analysis.
@@ -12,7 +13,7 @@ Exploratory data analysis or EDA is one of the most important but difficult to c
     <img src="/images/eda_1.png" alt="drawing" width="700" style="display: block; margin: 0 auto;"/>
 </div>
 
-# EDA for checking, validation and cleaning
+## EDA for checking, validation and cleaning
 
 
 Let’s get the obvious stuff out of the way first. Where a rough analysis plan is already in place, and some data has been assembled to support the analysis, a type of EDA serves to identify potential issues that might require remedial work before progressing. This is probably the most common type of exploratory analysis and is more closely linked to the goals of data cleaning than pure analysis and insight. This a big topic and I won’t attempt an exhaustive list here, but instead will describe a few of the most common tasks.
@@ -27,7 +28,7 @@ Measuring pairwise association provides some basic insights into how columns cov
 
 These types of techniques provide a first look at the data and answer important questions about quality, formatting and overall dependence structure. These steps can usually be carried out by the data analyst without any external support, and are generally well supported with easy-to-use code wrappers. These are absolutely essential steps and it’s possible to learn quite a lot about the data by applying them and thinking carefully about the results. But it’s very important to recognise that there is a limit to how much can be understood with this type of analysis. There’s a lot more to EDA.
 
-# grokking the data with EDA
+## grokking the data with EDA
 
 > When you claim to “grok” some knowledge or technique, you are asserting that you have not merely learned it in a detached instrumental way but that it has become part of you, part of your identity.
 
@@ -35,13 +36,13 @@ These types of techniques provide a first look at the data and answer important 
 
 I’ve totally made up the heading, but I think it’s by far the most important role of EDA and is mostly what the rest of this post is about. There is a sort of myth of the data analyst as a robotic processor of data, who is detached and passive. The reality is completely the opposite, where better data analysis will always come from an analyst with a deep understanding of the data and the processes that generated it. EDA has a crucial role in turning a data frame from a contextless collection of bytes into a meaningful representation of a physical process, transitioning the analyst from the passive processor to an expert with deeply internalised understanding of an area. This end state is intangible and qualitative because it happens completely in your own head. Consequently, this part of the EDA will be a creative and personal journey that is supported by a continuing internal conversation that probes and revisits your understanding of the broader context.
 
-# Building a data narrative
+## Building a data narrative
 
 The data frame you have in front of you for analysis is an incomplete and encoded representation of some real world process. Part of your role as an analyst is to solve problems and generate insights that respects the story of how the data were generated. For want of a better description, let’s call this story the data narrative. Part of this narrative might be the sequencing of events that lead to each data record coming into existence, part of it might be the data’s lineage in terms of the processing, joins and wrangling required to produce the data frame you end up with. If you are already an expert in the area you are working, this narrative may already be engrained in you. The data narrative completely frames the work you do, how you interpret every insight or modeled output, and most importantly, the credibility with which you can influence your audience.
 
 The data narrative is a complex form of metadata and is almost never part of the data frame. If you are fortunate, your organisation might keep clear and accessible documentation and data dictionaries that will be a huge first step to piecing together this narrative. However, it is often more typical that analysts are neither domain experts nor well-provided with nice documentation. In this case, the narrative is something that must be synthesised through detective work, drawing on a combination of data analysis and the experience of domain experts. This is, of course, much easier said than done.
 
-# The role of asking questions
+## The role of asking questions
 
 > Your goal during EDA is to develop an understanding of your data. The easiest way to do this is to use questions as tools to guide your investigation. When you ask a question, the question focuses your attention on a specific part of your dataset and helps you decide which graphs, models, or transformations to make.
 
@@ -55,17 +56,17 @@ As your understanding deepens and the analysis progresses, you’ll continue to 
 
 Take time to talk your findings over with another data scientist. The key here is to aim to communicate your understanding of the data narrative without getting too mired in the technical details of the data. The process of preparing a narrative that you can explain to a colleague will help to consolidate what you’ve learned and quickly expose gaps. A fresh set of eyes will nearly always raise further questions or force you to think of your data from a different perspective.
 
-# Do we even have the right data?
+## Do we even have the right data?
 
 An important byproduct of the process of building a better data narrative is that your understanding of what the most important or relevant questions to ask will improve. A crucial question to keep revisiting is whether the data you have is sufficient to address the most important questions. Are there additional data sources that you draw upon to enrich or improve the analysis? Are the columns you already have in your data frame defined correctly, or should they really be specified differently? It’s typical that data sets are assembled before anyone knows exactly how the data will be used and it can pay dividends to constantly revisit the question of whether the data contains everything sufficient to answer a particular question. Many problems in data science are much more easily solved by gathering the right data (or more of it) than by using fancier techniques.
 
-# Data hygiene and data splitting
+## Data hygiene and data splitting
 
 If you frequently fit predictive models, you’ll be aware of the risks of overfitting and the need to reserve partitions of the data to check that your findings truly generalise to unseen data. The same is true for the iterative types of EDA discussed in this article. The more detailed your analysis is, the higher the risk that insights gleaned in your EDA are false discoveries (aka statistical flukes). It is important that the confirmatory part of your analysis (prediction accuracy measurement or hypothesis testing) occurs on a different piece of data to your EDA.
 
 A related problem that frequently arises in machine learning projects is where EDA is run as a preliminary step before creating training and test splits. If the result of EDA influences your model choices (it nearly always will if done properly), then you’ve potentially reduced your test set’s ability to measure true out-of-sample error. So before you do anything, create a hygienic environment for your EDA by splitting your data, so that you don’t accidentally leak information from your test set into your model.
 
-# Creativity and the pitfalls of the data frame API
+## Creativity and the pitfalls of the data frame API
 
 > This was the tendency of jobs to be adapted to tools, rather than adapting tools to jobs.
 
@@ -77,7 +78,7 @@ My experience is that it’s good to have familiarity with tooling at multiple l
 
 The main point here is that exploratory data analysis can’t and shouldn’t be automated, because it is a process to support a human (you) to learn, and to do that well, there are few shortcuts.
 
-# Closing thought: an analogy with critical reading and literary analysis
+## Closing thought: an analogy with critical reading and literary analysis
 Like all good blog posts, my thinking on EDA began on Twitter. In the process, [Jesse Mostipak](https://x.com/kierisi) [made a great point](https://x.com/kierisi/status/1350812374165565440?s=20) that teaching EDA effectively might share similarities [to the way students are taught to interrogate literary texts](https://guides.library.harvard.edu/sixreadinghabits). I’d never considered EDA this way, but the analogy resonated strongly with me, and much of my thinking in this post owes a lot to being sent off in this direction, 🙏 thanks Jesse! There’s a lot to unpack in the analogy, and I have no training in critical reading so I can’t speak with any authority on that subject. Nevertheless, it seems that interrogating a text has broad similar to EDA in the sense of being driven by the goal of developing a deep understanding of a text.
 
 [This article by the Farnham Street blog](https://fs.blog/how-to-read-a-book/) summarises four levels of critical reading, originally proposed by Mortimer Adler. The final most analytical form of interrogation, called synotopical or comparative reading, hits on some of the themes I’ve discussed already:
