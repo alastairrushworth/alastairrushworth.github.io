@@ -1,0 +1,60 @@
+/* Custom styles to override the Even theme defaults */
+
+/* Make headings smaller */
+.post-content h1 {
+  font-size: 1.5em !important;
+}
+
+.post-content h2 {
+  font-size: 1.3em !important;
+}
+
+.post-content h3 {
+  font-size: 1.2em !important;
+}
+
+.post-content h4 {
+  font-size: 1.1em !important;
+}
+
+.post-content h5, .post-content h6 {
+  font-size: 1em !important;
+}
+
+/* Make post title smaller */
+.post__title {
+  font-size: 1.5em !important;
+}
+
+/* Make inline code smaller and remove background and padding */
+:not(pre) > code {
+  font-size: 0.85em !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: transparent !important;
+  border: none !important;
+}
+
+/* Make code blocks smaller */
+pre {
+  font-size: 0.85em !important;
+}
+
+pre code {
+  font-size: 1em !important; /* 1em relative to the parent pre which is already 0.85em */
+  padding: 0 !important;
+}
+
+/* Ensure code blocks and inline code have the same apparent size */
+.highlight {
+  font-size: 0.85em !important;
+}
+
+/* Make table of contents smaller */
+.post-toc-title {
+  font-size: 1.4em !important;
+}
+
+.post-toc-content {
+  font-size: 0.9em !important;
+}
