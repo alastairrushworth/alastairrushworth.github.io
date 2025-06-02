@@ -26,10 +26,13 @@
   font-size: 1.5em !important;
 }
 
-/* Make inline code smaller */
-code {
+/* Make inline code smaller and remove background and padding */
+:not(pre) > code {
   font-size: 0.85em !important;
-  padding: 0.2em 0.4em !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  background-color: transparent !important;
+  border: none !important;
 }
 
 /* Make code blocks smaller */
