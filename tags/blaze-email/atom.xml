@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>alastair rushworth - blaze.email</title>
+    <subtitle>a blog about data science and other things</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://alastairrushworth.github.io/tags/blaze-email/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://alastairrushworth.github.io/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-06-21T00:00:00+00:00</updated>
+    <id>https://alastairrushworth.github.io/tags/blaze-email/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Why finding good tech blogs is hard</title>
+        <published>2024-06-21T00:00:00+00:00</published>
+        <updated>2024-06-21T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://alastairrushworth.github.io/posts/why-finding-good-tech-blogs-is-hard/"/>
+        <id>https://alastairrushworth.github.io/posts/why-finding-good-tech-blogs-is-hard/</id>
+        
+        <content type="html" xml:base="https://alastairrushworth.github.io/posts/why-finding-good-tech-blogs-is-hard/">&lt;p&gt;The internet is a very big place and discovering good things is still an unsolved problem. Some of the best writing lives in the fringes of the navigable internet in independent blogs that are difficult to surface unless you already know what you are looking for. I’ve spent a lot of time working on this topic, and believe it’s not obvious why the services that purport to solve this problem, don’t (and likely never will).&lt;&#x2F;p&gt;
+&lt;p&gt;Firstly an important point of clarification: the title of this post is misleading, because I don’t think we should ever attempt to create sharp discrimination between ‘good’ and ‘bad’ content, or to create a service to serve up the ‘best’ content. I think of &lt;em&gt;quality&lt;&#x2F;em&gt; as being a statistic that’s only defined over a &lt;em&gt;distribution&lt;&#x2F;em&gt; of content (in the statistical sense of achieving some content diversity over some unseen axis). I’ll begin by expanding this point by explaining a few ways in which the content we end up reading is inevitably from a very specific type of distribution that’s far from ideal.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;on-filters&quot;&gt;On filters&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In order to read a thing on the internet, a decision was made that you should see that thing and not something else.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;It’s important to recognise that wherever we find content, on social media, news sites or search engines, someone or something decided you should see it. Maybe you made the decision, because you rolled your own tool. Maybe an algorithm did it. Maybe you read something that was trending on hacker news. It’s not intrinsically a bad thing, and doesn’t always imply intent to manipulate you. The internet is simply too big for this not to be the case. But it’s crucial to realise that we never have unfettered access to all of the internet’s content, or even an unbiased sample of any subset of it, and this has consequences.&lt;&#x2F;p&gt;
+&lt;p&gt;All of that might seem a bit obvious, but it feels necessary to assert before we go into detail about how these filters express themselves in different venues. What I try to do in the following sections is give an opinionated (but hopefully relatable) perspective on the experience of discovering content across a few popular services, and hopefully shed a little light on an old problem.&lt;&#x2F;p&gt;
+&lt;p&gt;I think a simple way to think of the problem is of a Venn diagram showing relevance and quality as separate, but overlapping traits. Again, I don’t mean to imply that there’s an objective way of crisply measuring the quality of a single piece of content, this is just a simplified way of thinking about content in the aggregate.&lt;&#x2F;p&gt;
+&lt;figure style=&quot;text-align: center;&quot;&gt;
+    &lt;img src=&quot;&#x2F;images&#x2F;content_1.webp&quot; alt=&quot;drawing&quot; width=&quot;600&quot;&#x2F;&gt;
+    &lt;figcaption&gt;A simple way to think about the performance of content recommendation.&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;By &lt;strong&gt;relevance&lt;&#x2F;strong&gt; I mean the set of content that is associated with your interests. On the other side is quality — the set of content that is good or worth reading. &lt;strong&gt;Quality&lt;&#x2F;strong&gt; is tricky to define, but it’s easy to describe what it isn’t: SEO blog posts, bland listicles, AI content farming etc. This is the bad quality stuff we’d rather avoid.&lt;&#x2F;p&gt;
+&lt;p&gt;Our aim is to find as much content as possible that is both high-quality and relevant. Of course, every person will have a slightly different Venn diagram, particularly in the relevance set, but I think it’s also true that what might be quality for me, may not be for you.&lt;&#x2F;p&gt;
+&lt;p&gt;I’ve also added a relevance ‘halo’ to represent the fuzzy set of content that might not be quite as relevant to your interests, but that if of sufficient quality, you’d still read. This is one of the most important parts of this diagram in my opinion, I’ve put it there to highlight a core problem in most recommendation systems: it’s implicitly assumed that personalisation is more important that all else. I think this is too simplistic — for example, if something is of good enough quality, (or important enough), then I don’t care whether it’s relevant. In other words, content is king. The breadth of each person’s halo varies, but you get the idea — we don’t always just want more of the same.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;search-engines&quot;&gt;Search engines&lt;&#x2F;h2&gt;
+&lt;p&gt;Let’s get the obvious out of the way. Google and Bing are the only real players, and as custodians of indexes of the entire internet, are in principle well placed to serve content from any niche. However, we know already that this doesn’t work out in practise, at all. &lt;a href=&quot;https:&#x2F;&#x2F;arstechnica.com&#x2F;gadgets&#x2F;2024&#x2F;01&#x2F;google-search-is-losing-the-fight-with-seo-spam-study-says&#x2F;&quot;&gt;Google has been struggling with SEO spam in recent years&lt;&#x2F;a&gt; and this struggle is being compounded by the &lt;a href=&quot;https:&#x2F;&#x2F;futurism.com&#x2F;ai-garbage-destroying-google-results&quot;&gt;rise of AI content&lt;&#x2F;a&gt;. The bottom line is that getting relevant content from a search engine is easy, getting good quality requires a lot of patience. Moving on…&lt;&#x2F;p&gt;
+&lt;figure style=&quot;text-align: center;&quot;&gt;
+    &lt;img src=&quot;&#x2F;images&#x2F;content_2.webp&quot; alt=&quot;drawing&quot; width=&quot;600&quot;&#x2F;&gt;
+    &lt;figcaption&gt;Search engines: huge breadth, but the average quality in search results is incredibly low.&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;h2 id=&quot;social-media&quot;&gt;Social media&lt;&#x2F;h2&gt;
+&lt;p&gt;I’m not here to criticise social media, &lt;a href=&quot;https:&#x2F;&#x2F;www.jaronlanier.com&#x2F;tenarguments.html&quot;&gt;that’s been very well covered by others&lt;&#x2F;a&gt;. They are excellent tools as communication devices and for communities to organise and interact. It’s unavoidable that the financial objectives of social media companies result in incentive structures and consequent behaviours that do not maximise utility and well-being for users. To be specific, there are three particular limitations on the &lt;em&gt;experienced&lt;&#x2F;em&gt; user content diet.&lt;&#x2F;p&gt;
+&lt;figure style=&quot;text-align: center;&quot;&gt;
+    &lt;img src=&quot;&#x2F;images&#x2F;content_3.webp&quot; alt=&quot;drawing&quot; width=&quot;600&quot;&#x2F;&gt;
+    &lt;figcaption&gt;Social media: Highly personalised, with a sprinkling of gems, but variety and coverage are low.&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;&lt;strong&gt;Problem 1: The popular masks the niche.&lt;&#x2F;strong&gt; What content you do discover is likely already popular with people similar to you. Almost by definition, niche content isn’t going to be popular enough to propagate over the network, and so most of what you could discover will be missed simply because it is niche.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Problem 2: User content is finite.&lt;&#x2F;strong&gt; In order for others to discover something, someone else must first share it. The internet is a very big place, and on any given social site, a lot of content that could be shared likely isn’t being shared there to begin with.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Problem 3: Personalisation is a trap.&lt;&#x2F;strong&gt; Part of the joy of discovery is finding something in a new area, on a challenging topic or from vibrant new authors. Statistically, such posts might look to ‘the algorithm’ as outside of your preferences and a less good bet for recommendation. It’s obvious why this makes sense for the social media company —if they did attempt to serve greater diversity, they’d have to risk lower average satisfaction with recommended content, and a degradation in their headline engagement metrics.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;rss-readers&quot;&gt;RSS readers&lt;&#x2F;h2&gt;
+&lt;p&gt;Curating a flow of content via RSS feeds has long been a go-to for power users. For those that don’t know, you can subscribe to &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;RSS&quot;&gt;almost any blog via an RSS feed&lt;&#x2F;a&gt; which updates when new posts are published. Typically you’d use a client like &lt;a href=&quot;https:&#x2F;&#x2F;feedly.com&#x2F;&quot;&gt;feedly&lt;&#x2F;a&gt; to manage your feeds and read posts. This allows you to keep up to date with any number of blogs you like to read.&lt;&#x2F;p&gt;
+&lt;figure style=&quot;text-align: center;&quot;&gt;
+    &lt;img src=&quot;&#x2F;images&#x2F;content_4.webp&quot; alt=&quot;drawing&quot; width=&quot;600&quot;&#x2F;&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;With RSS readers, you won’t ever need to read any spam or low quality content (unless a site you subscribe to publishes some), and you can ensure everything is relevant by being selective with the feeds you choose. Sounds great, but there are a couple of big drawbacks.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Problem 1. You have to do discovery yourself.&lt;&#x2F;strong&gt; Clients like Feedly really don’t help much with deciding &lt;em&gt;what&lt;&#x2F;em&gt; to subscribe to. It’s fine if you just want to follow a few major news sites, you can find those quickly. Much harder if you want to cover a broad swathe of independent writers and to find new ones&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Problem 2. Your feed reader is an unwieldy firehose with lots of irrelevant content.&lt;&#x2F;strong&gt; A creator might have a number of topics they like to publish articles on, maybe you are only interested in only one of them. If you subscribe to lots of blogs, you quickly end up with an explosion of articles that you need to screen by scrolling through manually.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;honourable-mentions&quot;&gt;Honourable mentions&lt;&#x2F;h2&gt;
+&lt;p&gt;There are some alternative search engines that tackle this problem head-on, and I’d be remiss not to mention them. &lt;a href=&quot;https:&#x2F;&#x2F;help.kagi.com&#x2F;kagi&#x2F;company&#x2F;&quot;&gt;Kagi&lt;&#x2F;a&gt; is a subscription search engine service that works a bit like Google but has a stronger emphasis on higher quality, small web content. I’m a Kagi subscriber and I’ve found it refreshing and often more efficient than using google. &lt;a href=&quot;https:&#x2F;&#x2F;exa.ai&#x2F;&quot;&gt;Exa.ai&lt;&#x2F;a&gt; uses embeddings to search the index. Most interesting to me personally is &lt;a href=&quot;https:&#x2F;&#x2F;search.marginalia.nu&#x2F;&quot;&gt;marginalia.nu&lt;&#x2F;a&gt; which is free and specifically focusses on non-commercial, independent content. (Self-plug alert…) I’ve been working on &lt;a href=&quot;https:&#x2F;&#x2F;blaze.email&#x2F;&quot;&gt;blaze.email&lt;&#x2F;a&gt; for over a year now, which offers a search engine and automated newsletter digests for tech content.&lt;&#x2F;p&gt;
+&lt;p&gt;Each of these offer improvements over the bigger players, though I don’t believe any truly solves the quality problem (yet).&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;a-final-thought-an-analogy-with-food&quot;&gt;A final thought: an analogy with food&lt;&#x2F;h2&gt;
+&lt;p&gt;I’m certain someone thought of this before I did, but there’s a useful analogy to be made between the information we consume online and the food we eat. It’s almost a cliche that good health comes from a &lt;em&gt;balanced and varied diet&lt;&#x2F;em&gt;. Something very similar applies to our information diet — we require a level of diversity in what we read — diversity interpreted in the broadest sense of variety and heterogeneity.&lt;&#x2F;p&gt;
+&lt;p&gt;What this might mean practically is that an ideal feed might appear less ‘palatable’ than the type built on engagement on a social media site, including articles that are longer and more challenging. In my view, the palatability is mostly a UI problem for an enterprising content company to solve. The UIs of most social sites are extremely basic, which is something they get away with by inflaming users with content that is designed to hit the brain stem with some reptile energy. But can we imagine a site, interface or application that rewards thinking critically and consuming from a broader outlet? Yeah, of course it’s possible.&lt;&#x2F;p&gt;
+&lt;p&gt;That’s not to say you shouldn’t enjoy the occasional shitpost, but consumed responsibly within a balanced and varied diet.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+</feed>

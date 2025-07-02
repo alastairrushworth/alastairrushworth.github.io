@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>alastair rushworth - visualisation</title>
+    <subtitle>a blog about data science and other things</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://alastairrushworth.github.io/tags/visualisation/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://alastairrushworth.github.io/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2022-10-17T00:00:00+00:00</updated>
+    <id>https://alastairrushworth.github.io/tags/visualisation/atom.xml</id>
+    <entry xml:lang="en">
+        <title>Visualising Tour De France Data In R</title>
+        <published>2022-10-17T00:00:00+00:00</published>
+        <updated>2022-10-17T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://alastairrushworth.github.io/posts/visualising-tour-de-france-data-in-r/"/>
+        <id>https://alastairrushworth.github.io/posts/visualising-tour-de-france-data-in-r/</id>
+        
+        <summary type="html">&lt;p&gt;The &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Tour_de_France&quot;&gt;Tour de France (‘Le Tour’)&lt;&#x2F;a&gt; is the world’s biggest and most prestigious cycling event with a long history spanning back as far as 1903. Each annual ‘edition’ of the race is composed of around 21 stages that traverse the French nation, each stage is a standalone race by itself. The racing is complex, with each team of 9 riders competing for any combination of individual stage wins, sprint points, mountain climbing, aggressive riding and team ability. The most coveted prize of all is the ‘Generale Classification’ (GC) which is awarded to the rider with the lowest aggregate time at the end of the race. Each day, the rider with the lowest aggregate time following the previous stage wears the ‘Maillot Jaune’ (yellow jersey) indicating that they are the current race leader.&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+</feed>

@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+    <title>alastair rushworth</title>
+    <subtitle>a blog about data science and other things</subtitle>
+    <link rel="self" type="application/atom+xml" href="https://alastairrushworth.github.io/atom.xml"/>
+    <link rel="alternate" type="text/html" href="https://alastairrushworth.github.io/"/>
+    <generator uri="https://www.getzola.org/">Zola</generator>
+    <updated>2024-06-29T00:00:00+00:00</updated>
+    <id>https://alastairrushworth.github.io/atom.xml</id>
+    <entry xml:lang="en">
+        <title>On using code copilots in data science</title>
+        <published>2024-06-29T00:00:00+00:00</published>
+        <updated>2024-06-29T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://alastairrushworth.github.io/posts/on-using-copilots-in-data-science/"/>
+        <id>https://alastairrushworth.github.io/posts/on-using-copilots-in-data-science/</id>
+        
+        <content type="html" xml:base="https://alastairrushworth.github.io/posts/on-using-copilots-in-data-science/">&lt;p&gt;I’ve lost track of how long I’ve been using &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;features&#x2F;copilot&quot;&gt;Github’s Copilot&lt;&#x2F;a&gt; via the &lt;a href=&quot;https:&#x2F;&#x2F;marketplace.visualstudio.com&#x2F;items?itemName=GitHub.copilot&quot;&gt;VSCode extension&lt;&#x2F;a&gt; but it’s well over 18 months at this point. It’s been absolutely game-changing for my productivity and enjoyment of writing code, but I’m often surprised to find that other data scientists haven’t tried it (or an equivalent tool like &lt;a href=&quot;https:&#x2F;&#x2F;www.qodo.ai&#x2F;&quot;&gt;codium&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;www.tabnine.com&#x2F;&quot;&gt;tabnine&lt;&#x2F;a&gt; and &lt;a href=&quot;https:&#x2F;&#x2F;www.cursor.com&#x2F;&quot;&gt;cursor.sh&lt;&#x2F;a&gt;). I’ve writing this to explain why I think it’s so important, and that it should be considered an essential part of a data scientist’s toolkit. If you don’t use a code copilot tool, I hope this provides a perspective on what you might be missing. If you do already, hopefully it resonates with your experiences.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;writing-code-is-slow&quot;&gt;Writing code is slow&lt;&#x2F;h2&gt;
+&lt;p&gt;The physical act of typing is an order of magnitude slower than the time it takes to decide what you intend to write. While typing, you need to remember how to use tools correctly to execute your intent (&lt;em&gt;how does pandas &lt;code&gt;.pivot()&lt;&#x2F;code&gt; work again?&lt;&#x2F;em&gt;), probably google some syntax (💀 &lt;em&gt;Stack Overflow&lt;&#x2F;em&gt;) and fix bugs or mistakes (&lt;em&gt;ugh, forgot to &lt;code&gt;.reset_index&lt;&#x2F;code&gt;&lt;&#x2F;em&gt;). There’s also exploratory work and data analysis &amp;amp; also iterating and refactoring (&lt;code&gt;that didn’t work, let’s try something else&lt;&#x2F;code&gt;), docstrings, comments, editing YAML files, yada yada. To say nothing of starting a new project and firing up your favourite modules and writing a first implementation of something.&lt;&#x2F;p&gt;
+&lt;p&gt;All of this is just slow, compared to the time it takes to imagine what you are going to do. Ok, I know some of you can touch type, have black-belts in vim shortcuts and retain code docs in your photographic memories. But a majority of data science development time is spent punching out pretty standard code, and happily, this is exactly the type of code that copilots are excellent at anticipating with very good suggestions.&lt;&#x2F;p&gt;
+&lt;p&gt;A slight philosophical segue. I think there’s an important distinction to be made between &lt;em&gt;typing code&lt;&#x2F;em&gt;, which is something you do with your fingers (and your web browser), and &lt;em&gt;realising ideas with software&lt;&#x2F;em&gt; which is something you mostly do with your brain. I’m not sure you can do one without the other, and the distinction isn’t totally crisp — but bear with me.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;code-is-cheap-thinking-is-expensive&quot;&gt;Code is cheap, thinking is expensive&lt;&#x2F;h2&gt;
+&lt;p&gt;Something we don’t talk about enough is just how much of the code we write ends up being thrown away. Projects change and sometimes die, ideas evolve and so does our code. But many (many) written lines of development, debugging, and EDA code are ephemeral and never even seen by another person.&lt;&#x2F;p&gt;
+&lt;p&gt;It’s a mistake to think of discarded code as waste, it’s an essential part of development. As many authors have observed, &lt;a href=&quot;https:&#x2F;&#x2F;alistapart.com&#x2F;article&#x2F;writing-is-thinking&#x2F;&quot;&gt;writing is thinking&lt;&#x2F;a&gt; and writing code is no different. This is most obvious to me in the case of &lt;a href=&quot;https:&#x2F;&#x2F;medium.com&#x2F;@alastairmrushworth&#x2F;exploratory-data-analysis-whats-the-point-56c73d33ec73&quot;&gt;EDA, where we learn by coding, thinking and iterating&lt;&#x2F;a&gt; and much of this code doesn’t see the light of day. There’s more in the linked article, but I don’t at all think of EDA as an ‘analysis stage’ as it’s often framed, but more of process of thinking and investigation.&lt;&#x2F;p&gt;
+&lt;p&gt;Anyways, finished code is a digital manifestation of an idea, and writing the code is a form of thinking that leads to that manifestation. There’s a ton of value in the thinking part — in general, more thinking should result in better ideas and finished software. Time is always a regularising factor on how much of this type of work can take place. Copilots act as an accelerant and multiplier that makes delivering better ideas easier, faster and maybe even delightful.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;so-what-gives&quot;&gt;So what gives?&lt;&#x2F;h2&gt;
+&lt;p&gt;Why the resistance the uptake of this type of tool? There’re a few reasons I’ve observed. The main one I think is that it’s simply passed a lot of people by — the last 2 years have passed in a haze of loud AI hype and chatbots. During the same period of time, code copilots have gone from being interesting, cool toys to something completely game-changing. You only need to scan some of the [comments on hackernews when Github Copilot first launched](the comments on hackernews when Github Copilot first launched) to get a sense of what a step change it was.&lt;&#x2F;p&gt;
+&lt;p&gt;Another reasonable objection is the risk of wrong &#x2F; hallucinated code inadvertently getting pushed and causing issues. To anyone worried about this, I suggest trying one of the major copilots out for a while, the risk is much lower than one might imagine. The workflow prevents this to an extent — copilots are more like very smart autocomplete, where you have full control over whether a code suggestion is accepted or not. It’s not at all like blindly copy-pasting large code generations from ChatGPT (though I believe this also has a place, but that’s for a another article).&lt;&#x2F;p&gt;
+&lt;p&gt;Speaking from personal experience, I used to be a bit precious about my code, and definitely felt defensive about the idea of copilots when I first started playing with &lt;a href=&quot;https:&#x2F;&#x2F;www.tabnine.com&#x2F;&quot;&gt;tabnine&lt;&#x2F;a&gt; (which has been around longer than most). I’m not sure but I think this attitude is fairly common and is probably reinforced by the emphasis many companies put on squeaky clean SWE practises when hiring. The myth of the 10x engineer polyglot who can write the full stack and do deep specialist development definitely doesn’t help either. There’s probably a lot more to it than that, but I hope you know what I’m talking about. I think all of these cultural threads add up to a kind of jealousness over our hard-won skills that results in a reflexive rejection of tools that might displace them. I sometimes need to remind myself that over sufficiently long time scales, much of our knowledge of syntax will be made redundant anyways — in 10 years time, I expect that half of the modules I routinely use now will have changed or been updated beyond recognition. Bottom line is that it’s good to care about code, but don’t let it get in the way of trying new ways to do it.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;wrap-up-give-it-a-go&quot;&gt;Wrap up: give it a go&lt;&#x2F;h2&gt;
+&lt;p&gt;My best advice would be to try out a copilot. I really like Github’s, because it integrates seamlessly with VSCode and it really hasn’t missed a beat since I first subscribed. It’s absolutely the easiest $10 I spend each month.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Why finding good tech blogs is hard</title>
+        <published>2024-06-21T00:00:00+00:00</published>
+        <updated>2024-06-21T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://alastairrushworth.github.io/posts/why-finding-good-tech-blogs-is-hard/"/>
+        <id>https://alastairrushworth.github.io/posts/why-finding-good-tech-blogs-is-hard/</id>
+        
+        <content type="html" xml:base="https://alastairrushworth.github.io/posts/why-finding-good-tech-blogs-is-hard/">&lt;p&gt;The internet is a very big place and discovering good things is still an unsolved problem. Some of the best writing lives in the fringes of the navigable internet in independent blogs that are difficult to surface unless you already know what you are looking for. I’ve spent a lot of time working on this topic, and believe it’s not obvious why the services that purport to solve this problem, don’t (and likely never will).&lt;&#x2F;p&gt;
+&lt;p&gt;Firstly an important point of clarification: the title of this post is misleading, because I don’t think we should ever attempt to create sharp discrimination between ‘good’ and ‘bad’ content, or to create a service to serve up the ‘best’ content. I think of &lt;em&gt;quality&lt;&#x2F;em&gt; as being a statistic that’s only defined over a &lt;em&gt;distribution&lt;&#x2F;em&gt; of content (in the statistical sense of achieving some content diversity over some unseen axis). I’ll begin by expanding this point by explaining a few ways in which the content we end up reading is inevitably from a very specific type of distribution that’s far from ideal.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;on-filters&quot;&gt;On filters&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;In order to read a thing on the internet, a decision was made that you should see that thing and not something else.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;It’s important to recognise that wherever we find content, on social media, news sites or search engines, someone or something decided you should see it. Maybe you made the decision, because you rolled your own tool. Maybe an algorithm did it. Maybe you read something that was trending on hacker news. It’s not intrinsically a bad thing, and doesn’t always imply intent to manipulate you. The internet is simply too big for this not to be the case. But it’s crucial to realise that we never have unfettered access to all of the internet’s content, or even an unbiased sample of any subset of it, and this has consequences.&lt;&#x2F;p&gt;
+&lt;p&gt;All of that might seem a bit obvious, but it feels necessary to assert before we go into detail about how these filters express themselves in different venues. What I try to do in the following sections is give an opinionated (but hopefully relatable) perspective on the experience of discovering content across a few popular services, and hopefully shed a little light on an old problem.&lt;&#x2F;p&gt;
+&lt;p&gt;I think a simple way to think of the problem is of a Venn diagram showing relevance and quality as separate, but overlapping traits. Again, I don’t mean to imply that there’s an objective way of crisply measuring the quality of a single piece of content, this is just a simplified way of thinking about content in the aggregate.&lt;&#x2F;p&gt;
+&lt;figure style=&quot;text-align: center;&quot;&gt;
+    &lt;img src=&quot;&#x2F;images&#x2F;content_1.webp&quot; alt=&quot;drawing&quot; width=&quot;600&quot;&#x2F;&gt;
+    &lt;figcaption&gt;A simple way to think about the performance of content recommendation.&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;By &lt;strong&gt;relevance&lt;&#x2F;strong&gt; I mean the set of content that is associated with your interests. On the other side is quality — the set of content that is good or worth reading. &lt;strong&gt;Quality&lt;&#x2F;strong&gt; is tricky to define, but it’s easy to describe what it isn’t: SEO blog posts, bland listicles, AI content farming etc. This is the bad quality stuff we’d rather avoid.&lt;&#x2F;p&gt;
+&lt;p&gt;Our aim is to find as much content as possible that is both high-quality and relevant. Of course, every person will have a slightly different Venn diagram, particularly in the relevance set, but I think it’s also true that what might be quality for me, may not be for you.&lt;&#x2F;p&gt;
+&lt;p&gt;I’ve also added a relevance ‘halo’ to represent the fuzzy set of content that might not be quite as relevant to your interests, but that if of sufficient quality, you’d still read. This is one of the most important parts of this diagram in my opinion, I’ve put it there to highlight a core problem in most recommendation systems: it’s implicitly assumed that personalisation is more important that all else. I think this is too simplistic — for example, if something is of good enough quality, (or important enough), then I don’t care whether it’s relevant. In other words, content is king. The breadth of each person’s halo varies, but you get the idea — we don’t always just want more of the same.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;search-engines&quot;&gt;Search engines&lt;&#x2F;h2&gt;
+&lt;p&gt;Let’s get the obvious out of the way. Google and Bing are the only real players, and as custodians of indexes of the entire internet, are in principle well placed to serve content from any niche. However, we know already that this doesn’t work out in practise, at all. &lt;a href=&quot;https:&#x2F;&#x2F;arstechnica.com&#x2F;gadgets&#x2F;2024&#x2F;01&#x2F;google-search-is-losing-the-fight-with-seo-spam-study-says&#x2F;&quot;&gt;Google has been struggling with SEO spam in recent years&lt;&#x2F;a&gt; and this struggle is being compounded by the &lt;a href=&quot;https:&#x2F;&#x2F;futurism.com&#x2F;ai-garbage-destroying-google-results&quot;&gt;rise of AI content&lt;&#x2F;a&gt;. The bottom line is that getting relevant content from a search engine is easy, getting good quality requires a lot of patience. Moving on…&lt;&#x2F;p&gt;
+&lt;figure style=&quot;text-align: center;&quot;&gt;
+    &lt;img src=&quot;&#x2F;images&#x2F;content_2.webp&quot; alt=&quot;drawing&quot; width=&quot;600&quot;&#x2F;&gt;
+    &lt;figcaption&gt;Search engines: huge breadth, but the average quality in search results is incredibly low.&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;h2 id=&quot;social-media&quot;&gt;Social media&lt;&#x2F;h2&gt;
+&lt;p&gt;I’m not here to criticise social media, &lt;a href=&quot;https:&#x2F;&#x2F;www.jaronlanier.com&#x2F;tenarguments.html&quot;&gt;that’s been very well covered by others&lt;&#x2F;a&gt;. They are excellent tools as communication devices and for communities to organise and interact. It’s unavoidable that the financial objectives of social media companies result in incentive structures and consequent behaviours that do not maximise utility and well-being for users. To be specific, there are three particular limitations on the &lt;em&gt;experienced&lt;&#x2F;em&gt; user content diet.&lt;&#x2F;p&gt;
+&lt;figure style=&quot;text-align: center;&quot;&gt;
+    &lt;img src=&quot;&#x2F;images&#x2F;content_3.webp&quot; alt=&quot;drawing&quot; width=&quot;600&quot;&#x2F;&gt;
+    &lt;figcaption&gt;Social media: Highly personalised, with a sprinkling of gems, but variety and coverage are low.&lt;&#x2F;figcaption&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;&lt;strong&gt;Problem 1: The popular masks the niche.&lt;&#x2F;strong&gt; What content you do discover is likely already popular with people similar to you. Almost by definition, niche content isn’t going to be popular enough to propagate over the network, and so most of what you could discover will be missed simply because it is niche.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Problem 2: User content is finite.&lt;&#x2F;strong&gt; In order for others to discover something, someone else must first share it. The internet is a very big place, and on any given social site, a lot of content that could be shared likely isn’t being shared there to begin with.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Problem 3: Personalisation is a trap.&lt;&#x2F;strong&gt; Part of the joy of discovery is finding something in a new area, on a challenging topic or from vibrant new authors. Statistically, such posts might look to ‘the algorithm’ as outside of your preferences and a less good bet for recommendation. It’s obvious why this makes sense for the social media company —if they did attempt to serve greater diversity, they’d have to risk lower average satisfaction with recommended content, and a degradation in their headline engagement metrics.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;rss-readers&quot;&gt;RSS readers&lt;&#x2F;h2&gt;
+&lt;p&gt;Curating a flow of content via RSS feeds has long been a go-to for power users. For those that don’t know, you can subscribe to &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;RSS&quot;&gt;almost any blog via an RSS feed&lt;&#x2F;a&gt; which updates when new posts are published. Typically you’d use a client like &lt;a href=&quot;https:&#x2F;&#x2F;feedly.com&#x2F;&quot;&gt;feedly&lt;&#x2F;a&gt; to manage your feeds and read posts. This allows you to keep up to date with any number of blogs you like to read.&lt;&#x2F;p&gt;
+&lt;figure style=&quot;text-align: center;&quot;&gt;
+    &lt;img src=&quot;&#x2F;images&#x2F;content_4.webp&quot; alt=&quot;drawing&quot; width=&quot;600&quot;&#x2F;&gt;
+&lt;&#x2F;figure&gt;
+&lt;p&gt;With RSS readers, you won’t ever need to read any spam or low quality content (unless a site you subscribe to publishes some), and you can ensure everything is relevant by being selective with the feeds you choose. Sounds great, but there are a couple of big drawbacks.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Problem 1. You have to do discovery yourself.&lt;&#x2F;strong&gt; Clients like Feedly really don’t help much with deciding &lt;em&gt;what&lt;&#x2F;em&gt; to subscribe to. It’s fine if you just want to follow a few major news sites, you can find those quickly. Much harder if you want to cover a broad swathe of independent writers and to find new ones&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;strong&gt;Problem 2. Your feed reader is an unwieldy firehose with lots of irrelevant content.&lt;&#x2F;strong&gt; A creator might have a number of topics they like to publish articles on, maybe you are only interested in only one of them. If you subscribe to lots of blogs, you quickly end up with an explosion of articles that you need to screen by scrolling through manually.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;honourable-mentions&quot;&gt;Honourable mentions&lt;&#x2F;h2&gt;
+&lt;p&gt;There are some alternative search engines that tackle this problem head-on, and I’d be remiss not to mention them. &lt;a href=&quot;https:&#x2F;&#x2F;help.kagi.com&#x2F;kagi&#x2F;company&#x2F;&quot;&gt;Kagi&lt;&#x2F;a&gt; is a subscription search engine service that works a bit like Google but has a stronger emphasis on higher quality, small web content. I’m a Kagi subscriber and I’ve found it refreshing and often more efficient than using google. &lt;a href=&quot;https:&#x2F;&#x2F;exa.ai&#x2F;&quot;&gt;Exa.ai&lt;&#x2F;a&gt; uses embeddings to search the index. Most interesting to me personally is &lt;a href=&quot;https:&#x2F;&#x2F;search.marginalia.nu&#x2F;&quot;&gt;marginalia.nu&lt;&#x2F;a&gt; which is free and specifically focusses on non-commercial, independent content. (Self-plug alert…) I’ve been working on &lt;a href=&quot;https:&#x2F;&#x2F;blaze.email&#x2F;&quot;&gt;blaze.email&lt;&#x2F;a&gt; for over a year now, which offers a search engine and automated newsletter digests for tech content.&lt;&#x2F;p&gt;
+&lt;p&gt;Each of these offer improvements over the bigger players, though I don’t believe any truly solves the quality problem (yet).&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;a-final-thought-an-analogy-with-food&quot;&gt;A final thought: an analogy with food&lt;&#x2F;h2&gt;
+&lt;p&gt;I’m certain someone thought of this before I did, but there’s a useful analogy to be made between the information we consume online and the food we eat. It’s almost a cliche that good health comes from a &lt;em&gt;balanced and varied diet&lt;&#x2F;em&gt;. Something very similar applies to our information diet — we require a level of diversity in what we read — diversity interpreted in the broadest sense of variety and heterogeneity.&lt;&#x2F;p&gt;
+&lt;p&gt;What this might mean practically is that an ideal feed might appear less ‘palatable’ than the type built on engagement on a social media site, including articles that are longer and more challenging. In my view, the palatability is mostly a UI problem for an enterprising content company to solve. The UIs of most social sites are extremely basic, which is something they get away with by inflaming users with content that is designed to hit the brain stem with some reptile energy. But can we imagine a site, interface or application that rewards thinking critically and consuming from a broader outlet? Yeah, of course it’s possible.&lt;&#x2F;p&gt;
+&lt;p&gt;That’s not to say you shouldn’t enjoy the occasional shitpost, but consumed responsibly within a balanced and varied diet.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Bread Salad</title>
+        <published>2024-06-14T00:00:00+00:00</published>
+        <updated>2024-06-14T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://alastairrushworth.github.io/recipes/bread-salad/"/>
+        <id>https://alastairrushworth.github.io/recipes/bread-salad/</id>
+        
+        <content type="html" xml:base="https://alastairrushworth.github.io/recipes/bread-salad/">&lt;h2 id=&quot;ingredients&quot;&gt;Ingredients&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;200 g part-baked ciabatta bread&lt;&#x2F;li&gt;
+&lt;li&gt;400 g ripe mixed tomatoes, roughly chopped&lt;&#x2F;li&gt;
+&lt;li&gt;280 g roasted peppers in olive oil, drained and roughly chopped&lt;&#x2F;li&gt;
+&lt;li&gt;8 anchovy fillets in olive oil, drained, optional&lt;&#x2F;li&gt;
+&lt;li&gt;2 tbsp red wine vinegar&lt;&#x2F;li&gt;
+&lt;li&gt;3 tbsp olive oil&lt;&#x2F;li&gt;
+&lt;li&gt;bunch fresh basil&lt;&#x2F;li&gt;
+&lt;li&gt;salt and freshly ground black pepper&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;method&quot;&gt;Method&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Tear bread into small pieces, toast in the oven until lightly brown.&lt;&#x2F;li&gt;
+&lt;li&gt;Prep veggies in a big salad bowl.&lt;&#x2F;li&gt;
+&lt;li&gt;Prep dressing in a small bowl.&lt;&#x2F;li&gt;
+&lt;li&gt;Add bread to the salad bowl.&lt;&#x2F;li&gt;
+&lt;li&gt;Pour dressing over the salad, mix well and let it sit for 5 - 10 minutes.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Brownies</title>
+        <published>2024-06-14T00:00:00+00:00</published>
+        <updated>2024-06-14T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://alastairrushworth.github.io/recipes/brownies/"/>
+        <id>https://alastairrushworth.github.io/recipes/brownies/</id>
+        
+        <content type="html" xml:base="https://alastairrushworth.github.io/recipes/brownies/">&lt;h2 id=&quot;ingredients&quot;&gt;Ingredients&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;120g dark chocolate&lt;&#x2F;li&gt;
+&lt;li&gt;80g butter&lt;&#x2F;li&gt;
+&lt;li&gt;250g golden caster sugar&lt;&#x2F;li&gt;
+&lt;li&gt;70g ground almonds&lt;&#x2F;li&gt;
+&lt;li&gt;1 egg&lt;&#x2F;li&gt;
+&lt;li&gt;50g cocoa powder&lt;&#x2F;li&gt;
+&lt;li&gt;125g self raising flour&lt;&#x2F;li&gt;
+&lt;li&gt;70g mini marshmallows&lt;&#x2F;li&gt;
+&lt;li&gt;1.5 tsp vanilla extract&lt;&#x2F;li&gt;
+&lt;li&gt;0.25 tsp baking powder&lt;&#x2F;li&gt;
+&lt;li&gt;0.5 tsp instant coffee granules&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;method&quot;&gt;Method&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Heat oven to 170C&#x2F;150C fan&#x2F;gas 31⁄2. Grease and line a 20cm square tin with greaseproof paper.&lt;&#x2F;li&gt;
+&lt;li&gt;Melt chocolate, coffee and butter with 60ml water on a low heat.&lt;&#x2F;li&gt;
+&lt;li&gt;Whisk the eggs and sugar together to a sabayon.&lt;&#x2F;li&gt;
+&lt;li&gt;Combine with the dry ingredients.&lt;&#x2F;li&gt;
+&lt;li&gt;Bake for 20 minutes.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Chorizo Chilli</title>
+        <published>2024-06-14T00:00:00+00:00</published>
+        <updated>2024-06-14T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://alastairrushworth.github.io/recipes/chorizo-chilli/"/>
+        <id>https://alastairrushworth.github.io/recipes/chorizo-chilli/</id>
+        
+        <content type="html" xml:base="https://alastairrushworth.github.io/recipes/chorizo-chilli/">&lt;h2 id=&quot;ingredients&quot;&gt;Ingredients&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;110g chorizo sliced&lt;&#x2F;li&gt;
+&lt;li&gt;500g minced beef&lt;&#x2F;li&gt;
+&lt;li&gt;½ tsp cocoa powder&lt;&#x2F;li&gt;
+&lt;li&gt;1 tsp dried oregano&lt;&#x2F;li&gt;
+&lt;li&gt;15ml tablespoon tomato paste &#x2F; puree&lt;&#x2F;li&gt;
+&lt;li&gt;400g can of chopped tomatoes&lt;&#x2F;li&gt;
+&lt;li&gt;2 tsp worcestershire sauce&lt;&#x2F;li&gt;
+&lt;li&gt;400g can of kidney beans (drained and rinsed)&lt;&#x2F;li&gt;
+&lt;li&gt;sea salt flakes (to taste)&lt;&#x2F;li&gt;
+&lt;li&gt;freshly ground black pepper (to taste)&lt;&#x2F;li&gt;
+&lt;li&gt;chopped fresh coriander to serve (optional)&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;method&quot;&gt;Method&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Fry chorizo in a large saucepan for a few mins.&lt;&#x2F;li&gt;
+&lt;li&gt;Add the mince, fry until broken up.&lt;&#x2F;li&gt;
+&lt;li&gt;Add the cocoa, oregano, and tomato paste and tinned tomatoes, stir well.&lt;&#x2F;li&gt;
+&lt;li&gt;Add the Worcestershire sauce and kidney beans.&lt;&#x2F;li&gt;
+&lt;li&gt;Turn the heat down low, and let the chilli simmer gently for 20 minutes.&lt;&#x2F;li&gt;
+&lt;li&gt;Season and serve immediately with fresh coriander.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Christmas Cake</title>
+        <published>2024-06-14T00:00:00+00:00</published>
+        <updated>2024-06-14T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://alastairrushworth.github.io/recipes/christmas-cake/"/>
+        <id>https://alastairrushworth.github.io/recipes/christmas-cake/</id>
+        
+        <content type="html" xml:base="https://alastairrushworth.github.io/recipes/christmas-cake/">&lt;h2 id=&quot;ingredients&quot;&gt;Ingredients&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;450g raisins&lt;&#x2F;li&gt;
+&lt;li&gt;450g sultanas&lt;&#x2F;li&gt;
+&lt;li&gt;120g mixed peel&lt;&#x2F;li&gt;
+&lt;li&gt;170g halved glace cherries&lt;&#x2F;li&gt;
+&lt;li&gt;285g plain flour&lt;&#x2F;li&gt;
+&lt;li&gt;285g butter&lt;&#x2F;li&gt;
+&lt;li&gt;285g soft brown sugar&lt;&#x2F;li&gt;
+&lt;li&gt;6 eggs (beaten)&lt;&#x2F;li&gt;
+&lt;li&gt;4 tbsps brandy&lt;&#x2F;li&gt;
+&lt;li&gt;rind grated from 1&#x2F;2 lemon&lt;&#x2F;li&gt;
+&lt;li&gt;1&#x2F;2 tsp mixed spice&lt;&#x2F;li&gt;
+&lt;li&gt;1&#x2F;2 tsp ground cinnamon&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;method&quot;&gt;Method&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Preheat the oven to 150C.&lt;&#x2F;li&gt;
+&lt;li&gt;Line a 9&quot; round cake tin.&lt;&#x2F;li&gt;
+&lt;li&gt;Mix the fruit, peel, cherries, flour and spices together.&lt;&#x2F;li&gt;
+&lt;li&gt;Cream the butter, sugar and lemon rind together.&lt;&#x2F;li&gt;
+&lt;li&gt;Add the eggs a little at a time, beating well after each addition.&lt;&#x2F;li&gt;
+&lt;li&gt;Fold in the flour and fruit mixture a bit at a time. Add the brandy.&lt;&#x2F;li&gt;
+&lt;li&gt;Put the mixture into the tin, make a dip in the centre.&lt;&#x2F;li&gt;
+&lt;li&gt;Put in lower part of oven and bake for 4 hours, cover the top with tin foil.&lt;&#x2F;li&gt;
+&lt;li&gt;Leave to cool in the tin for 4 - 6 hours, then wrap in greaseproof paper and store in an airtight tin.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Death Krispies</title>
+        <published>2024-06-14T00:00:00+00:00</published>
+        <updated>2024-06-14T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://alastairrushworth.github.io/recipes/death-kripies/"/>
+        <id>https://alastairrushworth.github.io/recipes/death-kripies/</id>
+        
+        <content type="html" xml:base="https://alastairrushworth.github.io/recipes/death-kripies/">&lt;h2 id=&quot;ingredients&quot;&gt;Ingredients&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;200g Rice Krispies&lt;&#x2F;li&gt;
+&lt;li&gt;200g butter&lt;&#x2F;li&gt;
+&lt;li&gt;200g marshmallows&lt;&#x2F;li&gt;
+&lt;li&gt;200g hard dairy toffees&lt;&#x2F;li&gt;
+&lt;li&gt;600g chocolate&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;method&quot;&gt;Method&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;Put butter, toffees and marshmallows in a large pan and gently melt.&lt;&#x2F;li&gt;
+&lt;li&gt;Once melted, take off the heat, add the Rice Krispies and mix gently until all the Krispies are coated.&lt;&#x2F;li&gt;
+&lt;li&gt;Press the mixture into a deep baking tray lined with greaseproof.&lt;&#x2F;li&gt;
+&lt;li&gt;Leave to cool for 1 - 2 hours - do not put in the fridge.&lt;&#x2F;li&gt;
+&lt;li&gt;Melt the chocolate and pour over the top of the Krispies, leave to set at room temperature.&lt;&#x2F;li&gt;
+&lt;li&gt;Cut into squares and serve.&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Veggie Fajitas</title>
+        <published>2024-06-14T00:00:00+00:00</published>
+        <updated>2024-06-14T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://alastairrushworth.github.io/recipes/veggie-fajitas/"/>
+        <id>https://alastairrushworth.github.io/recipes/veggie-fajitas/</id>
+        
+        <content type="html" xml:base="https://alastairrushworth.github.io/recipes/veggie-fajitas/">&lt;h2 id=&quot;ingredients&quot;&gt;Ingredients&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;400g can black beans, drained&lt;&#x2F;li&gt;
+&lt;li&gt;small bunch coriander, finely chopped&lt;&#x2F;li&gt;
+&lt;li&gt;4 large or 8-12 small flour tortillas&lt;&#x2F;li&gt;
+&lt;li&gt;1 avocado, sliced, or 1 small tub guacamole&lt;&#x2F;li&gt;
+&lt;li&gt;2 tbsp soured cream or crème fraîche&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;For the fajita mix&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;1 red and 1 yellow pepper, cut into strips&lt;&#x2F;li&gt;
+&lt;li&gt;1 tbsp oil&lt;&#x2F;li&gt;
+&lt;li&gt;1 red onion, cut into thin wedges&lt;&#x2F;li&gt;
+&lt;li&gt;1 garlic clove, crushed&lt;&#x2F;li&gt;
+&lt;li&gt;½ tsp chilli powder&lt;&#x2F;li&gt;
+&lt;li&gt;½ tsp smoked paprika&lt;&#x2F;li&gt;
+&lt;li&gt;½ tsp ground cumin&lt;&#x2F;li&gt;
+&lt;li&gt;1 lime, juiced&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;h2 id=&quot;method&quot;&gt;Method&lt;&#x2F;h2&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;To make the fajita mix, take two or three strips from each colour of pepper and finely chop them. Set aside. Heat the oil in a frying pan and fry the remaining pepper strips and the onion until soft and starting to brown at the edges. Cool slightly and mix in the chopped raw peppers. Add the garlic and cook for 1 min, then add the spices and stir. Cook for a couple of mins more until the spices become aromatic, then add half the lime juice and season. Transfer to a dish, leaving any juices behind, and keep warm.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Tip the black beans into the same pan, then add the remaining lime juice and plenty of seasoning. Stir the beans around the pan to warm them through and help them absorb any flavours of the fajita mix, then stir through the coriander.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;li&gt;
+&lt;p&gt;Warm the tortillas in a microwave or in a low oven, then wrap them so they don’t dry out. Serve the tortillas with the fajita mix, beans, avocado and soured cream for everyone to help themselves.&lt;&#x2F;p&gt;
+&lt;&#x2F;li&gt;
+&lt;&#x2F;ol&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Visualising Tour De France Data In R</title>
+        <published>2022-10-17T00:00:00+00:00</published>
+        <updated>2022-10-17T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://alastairrushworth.github.io/posts/visualising-tour-de-france-data-in-r/"/>
+        <id>https://alastairrushworth.github.io/posts/visualising-tour-de-france-data-in-r/</id>
+        
+        <summary type="html">&lt;p&gt;The &lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Tour_de_France&quot;&gt;Tour de France (‘Le Tour’)&lt;&#x2F;a&gt; is the world’s biggest and most prestigious cycling event with a long history spanning back as far as 1903. Each annual ‘edition’ of the race is composed of around 21 stages that traverse the French nation, each stage is a standalone race by itself. The racing is complex, with each team of 9 riders competing for any combination of individual stage wins, sprint points, mountain climbing, aggressive riding and team ability. The most coveted prize of all is the ‘Generale Classification’ (GC) which is awarded to the rider with the lowest aggregate time at the end of the race. Each day, the rider with the lowest aggregate time following the previous stage wears the ‘Maillot Jaune’ (yellow jersey) indicating that they are the current race leader.&lt;&#x2F;p&gt;</summary>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>Exploratory Data Analysis: what’s the point?</title>
+        <published>2020-05-12T00:00:00+00:00</published>
+        <updated>2020-05-12T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://alastairrushworth.github.io/posts/exploratory-data-analysis-whats-the-point/"/>
+        <id>https://alastairrushworth.github.io/posts/exploratory-data-analysis-whats-the-point/</id>
+        
+        <content type="html" xml:base="https://alastairrushworth.github.io/posts/exploratory-data-analysis-whats-the-point/">&lt;p&gt;Exploratory data analysis or EDA is one of the most important but difficult to codify parts of the data science toolkit. True exploratory analysis is without a sharply definable objective and evades being formalised into a set of clear steps. Despite this, EDA is used in at least a few very typical ways that connect to downstream tasks like data cleaning and hypothesis generation. But perhaps most importantly, it’s an integral part of how we learn to frame our thinking as data scientists. This post attempts to offer some perspective on the less-discussed ways in which EDA develops our contextual understanding of a data analysis.&lt;&#x2F;p&gt;
+&lt;div style=&quot;text-align: center;&quot;&gt;
+    &lt;img src=&quot;&#x2F;images&#x2F;eda_1.png&quot; alt=&quot;drawing&quot; width=&quot;700&quot; style=&quot;display: block; margin: 0 auto;&quot;&#x2F;&gt;
+&lt;&#x2F;div&gt;
+&lt;h2 id=&quot;eda-for-checking-validation-and-cleaning&quot;&gt;EDA for checking, validation and cleaning&lt;&#x2F;h2&gt;
+&lt;p&gt;Let’s get the obvious stuff out of the way first. Where a rough analysis plan is already in place, and some data has been assembled to support the analysis, a type of EDA serves to identify potential issues that might require remedial work before progressing. This is probably the most common type of exploratory analysis and is more closely linked to the goals of data cleaning than pure analysis and insight. This a big topic and I won’t attempt an exhaustive list here, but instead will describe a few of the most common tasks.&lt;&#x2F;p&gt;
+&lt;p&gt;The most common check is for the correctness of column types. Depending on the data source, different issues might arise here, but you’ll be familiar with at least some of these. Integers incorrectly encoded as strings, strings encoded as dates, unordered categories encoded as integers. Sometimes a column that should be numeric has the very occasional string entry. There are as many causes as there are issues: perhaps you didn’t specify the correct schema when you read the data; or the data are encoded in ambiguous way that results in an inappropriate type; or maybe some earlier data manipulation induced an unintended problem.&lt;&#x2F;p&gt;
+&lt;p&gt;We often check the prevalence of missing values and their dependence on other important features — usually because a lot of analysis methods do not handle missing values natively. Some columns may be totally unusable if they are mostly missing. Remedies here might include dropping or transform columns, imputing missing values, or choosing an algorithm that handles missingness out of the box.&lt;&#x2F;p&gt;
+&lt;p&gt;Distribution, shift and relevance: it is important to inspect the distribution of values in each column — and consider whether these look how we’d expect (where we have an expectation). Do the distributions covary, especially with time (data are almost never consistent with stationarity with respect to time). Thinking about distributional shift is crucial for making decisions around which window of data is most important or relevant for addressing a specific question. It might expose or confirm trends and temporal patterns that downstream analysis needs to be aware of.&lt;&#x2F;p&gt;
+&lt;p&gt;Measuring pairwise association provides some basic insights into how columns covary and might help reveal columns that are collinear or even identical that could be removed without detriment. It might help uncover some of the overall structure in the data or indicate collections of related columns. Pairwise association measures, like Pearson correlation coefficients, are overused in this context and are limited to only providing a linear and unconditional view of pairwise association. Nevertheless, a lot of insight can be gleaned from this type of analysis if you know what to look for.&lt;&#x2F;p&gt;
+&lt;p&gt;These types of techniques provide a first look at the data and answer important questions about quality, formatting and overall dependence structure. These steps can usually be carried out by the data analyst without any external support, and are generally well supported with easy-to-use code wrappers. These are absolutely essential steps and it’s possible to learn quite a lot about the data by applying them and thinking carefully about the results. But it’s very important to recognise that there is a limit to how much can be understood with this type of analysis. There’s a lot more to EDA.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;grokking-the-data-with-eda&quot;&gt;grokking the data with EDA&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;When you claim to “grok” some knowledge or technique, you are asserting that you have not merely learned it in a detached instrumental way but that it has become part of you, part of your identity.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;http:&#x2F;&#x2F;www.catb.org&#x2F;~esr&#x2F;jargon&#x2F;html&#x2F;G&#x2F;grok.html&quot;&gt;‘grok’, &lt;em&gt;The Jargon File&lt;&#x2F;em&gt;&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;I’ve totally made up the heading, but I think it’s by far the most important role of EDA and is mostly what the rest of this post is about. There is a sort of myth of the data analyst as a robotic processor of data, who is detached and passive. The reality is completely the opposite, where better data analysis will always come from an analyst with a deep understanding of the data and the processes that generated it. EDA has a crucial role in turning a data frame from a contextless collection of bytes into a meaningful representation of a physical process, transitioning the analyst from the passive processor to an expert with deeply internalised understanding of an area. This end state is intangible and qualitative because it happens completely in your own head. Consequently, this part of the EDA will be a creative and personal journey that is supported by a continuing internal conversation that probes and revisits your understanding of the broader context.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;building-a-data-narrative&quot;&gt;Building a data narrative&lt;&#x2F;h2&gt;
+&lt;p&gt;The data frame you have in front of you for analysis is an incomplete and encoded representation of some real world process. Part of your role as an analyst is to solve problems and generate insights that respects the story of how the data were generated. For want of a better description, let’s call this story the data narrative. Part of this narrative might be the sequencing of events that lead to each data record coming into existence, part of it might be the data’s lineage in terms of the processing, joins and wrangling required to produce the data frame you end up with. If you are already an expert in the area you are working, this narrative may already be engrained in you. The data narrative completely frames the work you do, how you interpret every insight or modeled output, and most importantly, the credibility with which you can influence your audience.&lt;&#x2F;p&gt;
+&lt;p&gt;The data narrative is a complex form of metadata and is almost never part of the data frame. If you are fortunate, your organisation might keep clear and accessible documentation and data dictionaries that will be a huge first step to piecing together this narrative. However, it is often more typical that analysts are neither domain experts nor well-provided with nice documentation. In this case, the narrative is something that must be synthesised through detective work, drawing on a combination of data analysis and the experience of domain experts. This is, of course, much easier said than done.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;the-role-of-asking-questions&quot;&gt;The role of asking questions&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Your goal during EDA is to develop an understanding of your data. The easiest way to do this is to use questions as tools to guide your investigation. When you ask a question, the question focuses your attention on a specific part of your dataset and helps you decide which graphs, models, or transformations to make.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;r4ds.had.co.nz&#x2F;exploratory-data-analysis.html&quot;&gt;&lt;em&gt;R for Data Science&lt;&#x2F;em&gt;, Hadley Wickham (2021)&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;EDA can’t happen in a computational vacuum. To do this well, we need to be alternating between interrogating the data and asking ourselves if what we find is consistent with our internal understanding of the data’s narrative. &lt;em&gt;Does what I see make sense to me? Would I feel comfortable to explain it to someone else?&lt;&#x2F;em&gt;#&lt;&#x2F;p&gt;
+&lt;p&gt;In large organisations, you might also be speaking with a domain expert to help with this (if that person isn’t you), though they needn’t be an internal expert if the data come from outside the organisation. If you don’t yet have direct access to such a person, demand that you do — this person will supercharge your eventual analysis and will be often be the difference between success or failure of the entire project. In the beginning, take lots of time to let experts talk more broadly about the data, as they understand all of the salient dependencies, anomalies and gotchas that will save you a lot of time in the long run. Take time to use simple data analysis to carefully confirm what you’re told. The key here is not checking for correctness, but to grow your understanding of the data: it’s important to remember that it’s one thing to be told something about the data narrative, but it’s much more meaningful to use your own analysis to see it expressed in the data.&lt;&#x2F;p&gt;
+&lt;p&gt;As your understanding deepens and the analysis progresses, you’ll continue to find new patterns and structure in the data. Keep revisiting your understanding of the data narrative, and check whether what you are seeing is consistent with that. As your understanding of the data narrative matures, the gaps will come into focus: consider creative ways to use the data or ask a relevant question to close the gap. The relationship between internalised data narrative and data exploration is a two-way street.&lt;&#x2F;p&gt;
+&lt;p&gt;Take time to talk your findings over with another data scientist. The key here is to aim to communicate your understanding of the data narrative without getting too mired in the technical details of the data. The process of preparing a narrative that you can explain to a colleague will help to consolidate what you’ve learned and quickly expose gaps. A fresh set of eyes will nearly always raise further questions or force you to think of your data from a different perspective.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;do-we-even-have-the-right-data&quot;&gt;Do we even have the right data?&lt;&#x2F;h2&gt;
+&lt;p&gt;An important byproduct of the process of building a better data narrative is that your understanding of what the most important or relevant questions to ask will improve. A crucial question to keep revisiting is whether the data you have is sufficient to address the most important questions. Are there additional data sources that you draw upon to enrich or improve the analysis? Are the columns you already have in your data frame defined correctly, or should they really be specified differently? It’s typical that data sets are assembled before anyone knows exactly how the data will be used and it can pay dividends to constantly revisit the question of whether the data contains everything sufficient to answer a particular question. Many problems in data science are much more easily solved by gathering the right data (or more of it) than by using fancier techniques.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;data-hygiene-and-data-splitting&quot;&gt;Data hygiene and data splitting&lt;&#x2F;h2&gt;
+&lt;p&gt;If you frequently fit predictive models, you’ll be aware of the risks of overfitting and the need to reserve partitions of the data to check that your findings truly generalise to unseen data. The same is true for the iterative types of EDA discussed in this article. The more detailed your analysis is, the higher the risk that insights gleaned in your EDA are false discoveries (aka statistical flukes). It is important that the confirmatory part of your analysis (prediction accuracy measurement or hypothesis testing) occurs on a different piece of data to your EDA.&lt;&#x2F;p&gt;
+&lt;p&gt;A related problem that frequently arises in machine learning projects is where EDA is run as a preliminary step before creating training and test splits. If the result of EDA influences your model choices (it nearly always will if done properly), then you’ve potentially reduced your test set’s ability to measure true out-of-sample error. So before you do anything, create a hygienic environment for your EDA by splitting your data, so that you don’t accidentally leak information from your test set into your model.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;creativity-and-the-pitfalls-of-the-data-frame-api&quot;&gt;Creativity and the pitfalls of the data frame API&lt;&#x2F;h2&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This was the tendency of jobs to be adapted to tools, rather than adapting tools to jobs.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;en.wikipedia.org&#x2F;wiki&#x2F;Silvan_Tomkins&quot;&gt;Silvan Tomkins&lt;&#x2F;a&gt;, &lt;em&gt;Computer Simulation of Personality: Frontier of Psychological Theory (1963)&lt;&#x2F;em&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Almost all data analysis now begins with some form of data frame — a tabular data format with columns of mixed types, where each row is a record. In Python and R, data analysis tooling has coalesced around the data frame object, which has been a huge convenience and productivity boost for the analyst. I wouldn’t for a second debate that this hasn’t been a positive development, but there is a risk here that EDA, because of the ease and uniformity of use of the tooling, becomes an exercise in applying boilerplate code. This creates a hidden creativity trap where the analysis can become narrowed by the range of uses supported by a particular set of tools. While such tools are extremely powerful when they are genuinely supporting you to develop your understanding of the data narrative, it’s important to avoid becoming too reliant on any single tool.&lt;&#x2F;p&gt;
+&lt;p&gt;My experience is that it’s good to have familiarity with tooling at multiple levels of abstraction. Extremely high level interfaces to auto-generate certain types of exploratory analysis are very handy, and big time savers when they provide just what you need. However, the majority of EDA is more creative in nature and becoming expert with data manipulation tools like dplyr and pandas in combination with graphical tools like matplotlib and ggplot2 provides much finer control and fewer restrictions on your creativity.&lt;&#x2F;p&gt;
+&lt;p&gt;The main point here is that exploratory data analysis can’t and shouldn’t be automated, because it is a process to support a human (you) to learn, and to do that well, there are few shortcuts.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;closing-thought-an-analogy-with-critical-reading-and-literary-analysis&quot;&gt;Closing thought: an analogy with critical reading and literary analysis&lt;&#x2F;h2&gt;
+&lt;p&gt;Like all good blog posts, my thinking on EDA began on Twitter. In the process, &lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;kierisi&quot;&gt;Jesse Mostipak&lt;&#x2F;a&gt; &lt;a href=&quot;https:&#x2F;&#x2F;x.com&#x2F;kierisi&#x2F;status&#x2F;1350812374165565440?s=20&quot;&gt;made a great point&lt;&#x2F;a&gt; that teaching EDA effectively might share similarities &lt;a href=&quot;https:&#x2F;&#x2F;guides.library.harvard.edu&#x2F;sixreadinghabits&quot;&gt;to the way students are taught to interrogate literary texts&lt;&#x2F;a&gt;. I’d never considered EDA this way, but the analogy resonated strongly with me, and much of my thinking in this post owes a lot to being sent off in this direction, 🙏 thanks Jesse! There’s a lot to unpack in the analogy, and I have no training in critical reading so I can’t speak with any authority on that subject. Nevertheless, it seems that interrogating a text has broad similar to EDA in the sense of being driven by the goal of developing a deep understanding of a text.&lt;&#x2F;p&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;fs.blog&#x2F;how-to-read-a-book&#x2F;&quot;&gt;This article by the Farnham Street blog&lt;&#x2F;a&gt; summarises four levels of critical reading, originally proposed by Mortimer Adler. The final most analytical form of interrogation, called synotopical or comparative reading, hits on some of the themes I’ve discussed already:&lt;&#x2F;p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;This task is undertaken by identifying relevant passages, translating the terminology, framing and ordering the questions that need answering, defining the issues, and having a conversation with the responses.&lt;&#x2F;p&gt;
+&lt;p&gt;The goal is not to achieve an overall understanding of any particular book, but rather to understand the subject and develop a deep fluency.&lt;&#x2F;p&gt;
+&lt;p&gt;This is all about identifying and filling in your knowledge gaps.&lt;&#x2F;p&gt;
+&lt;&#x2F;blockquote&gt;
+&lt;p&gt;&lt;a href=&quot;https:&#x2F;&#x2F;fs.blog&#x2F;how-to-read-a-book&#x2F;&quot;&gt;&lt;em&gt;Farnham Street blog&lt;&#x2F;em&gt;, How to Read a Book: The Ultimate Guide by Mortimer Adler&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;p&gt;Sounds familiar doesn’t it? Asking questions (of yourself), contextualising and framing, closing knowledge gaps and achieving fluency are all key parts of a successful EDA. What I’m most excited about here is that we can draw on the analytical framework of an existing and well-established discipline, as scaffolding to think about how we can make improvements to the way we teach and practice EDA. Again, full credit to Jesse for this idea.&lt;&#x2F;p&gt;
+</content>
+        
+    </entry>
+    <entry xml:lang="en">
+        <title>About</title>
+        <published>2010-01-01T00:00:00+00:00</published>
+        <updated>2010-01-01T00:00:00+00:00</updated>
+        
+        <author>
+          <name>
+            
+              Unknown
+            
+          </name>
+        </author>
+        
+        <link rel="alternate" type="text/html" href="https://alastairrushworth.github.io/about/"/>
+        <id>https://alastairrushworth.github.io/about/</id>
+        
+        <content type="html" xml:base="https://alastairrushworth.github.io/about/">&lt;p&gt;This is the personal site of alastair rushworth, a data scientist and ML engineer who loves everything python, data and ML.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;more-info&quot;&gt;More Info&lt;&#x2F;h2&gt;
+&lt;ul&gt;
+&lt;li&gt;I develop &lt;a href=&quot;https:&#x2F;&#x2F;blaze.email&quot;&gt;blaze.email&lt;&#x2F;a&gt;, an email content recommendation system for developers and people working in tech&lt;&#x2F;li&gt;
+&lt;li&gt;I infrequently write posts over at &lt;a href=&quot;https:&#x2F;&#x2F;alastairrushworth.com&#x2F;posts&quot;&gt;https:&#x2F;&#x2F;alastairrushworth.com&#x2F;posts&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;Before I worked in ML, I lectured in statistics, some papers from that time &lt;a href=&quot;https:&#x2F;&#x2F;scholar.google.com&#x2F;citations?user=imiL1YoAAAAJ&amp;amp;hl=en&quot;&gt;can be found on this Google Scholar page&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;li&gt;You can follow me on &lt;a href=&quot;https:&#x2F;&#x2F;www.linkedin.com&#x2F;in&#x2F;alastair-rushworth&#x2F;&quot;&gt;LinkedIn&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;bsky.app&#x2F;profile&#x2F;alastairrushworth.bsky.social&quot;&gt;bluesky&lt;&#x2F;a&gt;, &lt;a href=&quot;https:&#x2F;&#x2F;fosstodon.org&#x2F;@alastairmrushworth&quot;&gt;Mastodon&lt;&#x2F;a&gt; or &lt;a href=&quot;https:&#x2F;&#x2F;github.com&#x2F;alastairrushworth&quot;&gt;github&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+</content>
+        
+    </entry>
+</feed>
