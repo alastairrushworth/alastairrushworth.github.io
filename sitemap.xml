@@ -7,9 +7,7 @@
   single entry point referenced from /robots.txt; it lets crawlers discover
   every section without this repo having to track the others' internal pages.
 
-  - sitemap-pages.xml ......... pages owned by this root user-site repo,
-                                plus /stockscreen/ (a separate site that has
-                                no sitemap of its own).
+  - sitemap-pages.xml ......... pages owned by this root user-site repo.
   - <section>/sitemap.xml ..... each project site's self-maintained sitemap.
 -->
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -31,6 +29,10 @@
   </sitemap>
   <sitemap>
     <loc>https://alastairrushworth.com/meditation/sitemap.xml</loc>
+    <lastmod>2026-06-25</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://alastairrushworth.com/stockscreen/sitemap.xml</loc>
     <lastmod>2026-06-25</lastmod>
   </sitemap>
 </sitemapindex>
