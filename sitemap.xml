@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sitemap index for alastairrushworth.com.
+
+  The domain hosts several independent project sites, each in its own repo with
+  its own structure (and, where present, its own sitemap). This index is the
+  single entry point referenced from /robots.txt; it lets crawlers discover
+  every section without this repo having to track the others' internal pages.
+
+  - sitemap-pages.xml ......... pages owned by this root user-site repo,
+                                plus /stockscreen/ (a separate site that has
+                                no sitemap of its own).
+  - <section>/sitemap.xml ..... each project site's self-maintained sitemap.
+-->
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://alastairrushworth.com/sitemap-pages.xml</loc>
+    <lastmod>2026-06-25</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://alastairrushworth.com/bootstrapfounders/sitemap.xml</loc>
+    <lastmod>2026-06-25</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://alastairrushworth.com/elements/sitemap.xml</loc>
+    <lastmod>2026-06-25</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://alastairrushworth.com/inspectdf/sitemap.xml</loc>
+    <lastmod>2026-06-25</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://alastairrushworth.com/meditation/sitemap.xml</loc>
+    <lastmod>2026-06-25</lastmod>
+  </sitemap>
+</sitemapindex>
