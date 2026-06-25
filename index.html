@@ -80,8 +80,7 @@
     .desc { color: var(--muted); }
     .meta { color: var(--faint); font-size: 12.5px; white-space: nowrap; justify-self: end; }
     .meta .tag { color: var(--muted); }
-    .meta .live { color: var(--accent); }
-    .meta .star { color: #d9b760; }
+    .meta .web { color: var(--accent); }
 
     /* ---- footer ---- */
     footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line);
@@ -108,7 +107,6 @@
         <a href="https://github.com/alastairrushworth">github</a>
         <a href="https://blognerd.app">blognerd</a>
         <a href="https://blaze.email">blaze</a>
-        <a href="recipes/">recipes</a>
       </nav>
     </header>
 
@@ -119,32 +117,37 @@
           <li><a class="row" href="https://cyclearchive.com">
             <span class="name">cyclearchive</span>
             <span class="desc">an archive of historical cycling magazines</span>
-            <span class="meta"><span class="tag">js</span> · <span class="live">live</span></span>
+            <span class="meta"><span class="web">web</span></span>
           </a></li>
           <li><a class="row" href="/bootstrapfounders">
             <span class="name">bootstrapfounders</span>
-            <span class="desc">bootstrapped founders, gathered in one place</span>
-            <span class="meta"><span class="tag">web</span></span>
+            <span class="desc">a field guide for founders bootstrapping a startup</span>
+            <span class="meta"><span class="web">web</span></span>
           </a></li>
           <li><a class="row" href="/stockscreen">
             <span class="name">stockscreen</span>
-            <span class="desc">a little stock screener</span>
-            <span class="meta"><span class="tag">web</span></span>
+            <span class="desc">s&amp;p 500 stock screener &amp; factor backtester</span>
+            <span class="meta"><span class="web">web</span></span>
           </a></li>
           <li><a class="row" href="/elements">
             <span class="name">elements</span>
-            <span class="desc">a poke around the periodic table</span>
-            <span class="meta"><span class="tag">web</span></span>
+            <span class="desc">an interactive periodic table of all 118 elements</span>
+            <span class="meta"><span class="web">web</span></span>
           </a></li>
           <li><a class="row" href="/meditation">
             <span class="name">meditation</span>
-            <span class="desc">a quiet little meditation timer</span>
-            <span class="meta"><span class="tag">web</span></span>
+            <span class="desc">a curated list of guided meditation podcasts</span>
+            <span class="meta"><span class="web">web</span></span>
           </a></li>
           <li><a class="row" href="https://newsletter.alastairrushworth.com">
             <span class="name">newsletter</span>
             <span class="desc">occasional notes, straight to your inbox</span>
-            <span class="meta"><span class="tag">email</span> · <span class="live">live</span></span>
+            <span class="meta"><span class="web">web</span></span>
+          </a></li>
+          <li><a class="row" href="recipes/">
+            <span class="name">recipes</span>
+            <span class="desc">a few veggie things i keep coming back to</span>
+            <span class="meta"><span class="web">web</span></span>
           </a></li>
         </ul>
       </section>
@@ -152,30 +155,20 @@
       <section>
         <h2><span class="p">~/</span>open-source</h2>
         <ul>
-          <li><a class="row" href="https://github.com/alastairrushworth/free-data-science">
-            <span class="name">free-data-science</span>
-            <span class="desc">a thematic list of free data-science resources</span>
-            <span class="meta"><span class="tag">data</span> · 328<span class="star">★</span></span>
-          </a></li>
           <li><a class="row" href="https://github.com/alastairrushworth/inspectdf">
             <span class="name">inspectdf</span>
             <span class="desc">explore &amp; compare data frames in r</span>
-            <span class="meta"><span class="tag">r</span> · 254<span class="star">★</span></span>
+            <span class="meta"><span class="tag">r</span></span>
           </a></li>
           <li><a class="row" href="https://github.com/alastairrushworth/htmldf">
             <span class="name">htmldf</span>
             <span class="desc">simple scraping → tidy one-row page summaries</span>
-            <span class="meta"><span class="tag">r</span> · 82<span class="star">★</span></span>
-          </a></li>
-          <li><a class="row" href="https://github.com/alastairrushworth/tdf">
-            <span class="name">tdf</span>
-            <span class="desc">tour de france winners &amp; stage data</span>
-            <span class="meta"><span class="tag">data</span> · 21<span class="star">★</span></span>
+            <span class="meta"><span class="tag">r</span></span>
           </a></li>
           <li><a class="row" href="https://github.com/alastairrushworth/inspectpd">
             <span class="name">inspectpd</span>
             <span class="desc">inspectdf's ideas, for pandas</span>
-            <span class="meta"><span class="tag">py</span> · 9<span class="star">★</span></span>
+            <span class="meta"><span class="tag">py</span></span>
           </a></li>
         </ul>
       </section>
@@ -183,51 +176,50 @@
       <section>
         <h2><span class="p">~/</span>archive</h2>
         <ul>
+          <li><a class="row" href="https://github.com/alastairrushworth/free-data-science">
+            <span class="name">free-data-science</span>
+            <span class="desc">a thematic list of free data-science resources</span>
+            <span class="meta"><span class="tag">data</span></span>
+          </a></li>
+          <li><a class="row" href="https://github.com/alastairrushworth/tdf">
+            <span class="name">tdf</span>
+            <span class="desc">tour de france winners &amp; stage data</span>
+            <span class="meta"><span class="tag">data</span></span>
+          </a></li>
           <li><a class="row" href="https://github.com/alastairrushworth/normality">
             <span class="name">normality</span>
             <span class="desc">17 normality tests behind one wrapper</span>
-            <span class="meta"><span class="tag">r</span> · 5<span class="star">★</span></span>
+            <span class="meta"><span class="tag">r</span></span>
           </a></li>
           <li><a class="row" href="https://github.com/alastairrushworth/rssfeeds">
             <span class="name">rssfeeds</span>
             <span class="desc">~10k data-science &amp; ml rss feeds</span>
-            <span class="meta"><span class="tag">data</span> · 5<span class="star">★</span></span>
+            <span class="meta"><span class="tag">data</span></span>
           </a></li>
           <li><a class="row" href="https://github.com/alastairrushworth/rorpy">
             <span class="name">rorpy</span>
             <span class="desc">r or python? classify a page by its code</span>
-            <span class="meta"><span class="tag">r</span> · 4<span class="star">★</span></span>
+            <span class="meta"><span class="tag">r</span></span>
           </a></li>
           <li><a class="row" href="https://github.com/alastairrushworth/smnet">
             <span class="name">smnet</span>
             <span class="desc">smoothing for data over stream networks</span>
-            <span class="meta"><span class="tag">r</span> · 3<span class="star">★</span></span>
+            <span class="meta"><span class="tag">r</span></span>
           </a></li>
           <li><a class="row" href="https://github.com/alastairrushworth/badlm">
             <span class="name">badlm</span>
             <span class="desc">bayesian adaptive distributed lag models</span>
-            <span class="meta"><span class="tag">r</span> · 1<span class="star">★</span></span>
+            <span class="meta"><span class="tag">r</span></span>
           </a></li>
           <li><a class="row" href="https://blognerd.app">
             <span class="name">blognerd</span>
             <span class="desc">search engine for indie blogs &amp; rss feeds</span>
-            <span class="meta"><span class="tag">js</span> · <span class="live">live</span></span>
+            <span class="meta"><span class="tag">js</span></span>
           </a></li>
           <li><a class="row" href="https://blaze.email">
             <span class="name">blaze</span>
             <span class="desc">tech newsletters, gathered &amp; summarised</span>
-            <span class="meta"><span class="tag">py</span> · <span class="live">live</span></span>
-          </a></li>
-        </ul>
-      </section>
-
-      <section>
-        <h2><span class="p">~/</span>recipes</h2>
-        <ul>
-          <li><a class="row" href="recipes/">
-            <span class="name">recipes</span>
-            <span class="desc">a few veggie things i keep coming back to</span>
-            <span class="meta"><span class="tag">food</span></span>
+            <span class="meta"><span class="tag">py</span></span>
           </a></li>
         </ul>
       </section>
