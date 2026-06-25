@@ -1,8 +1,0 @@
-name = "apollo"
-description = "Modern and minimalistic blog theme"
-min_version = "0.14.0"
-license = "MIT"
-
-[author]
-name = "alastair"
-homepage = "https://alastairrushworth.github.io/"
