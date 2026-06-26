@@ -3,6 +3,11 @@
   Pages owned by the root user-site repo. Project sites that maintain their
   own sitemap (including /stockscreen/) are referenced from the sitemap index
   (sitemap.xml) instead of being duplicated here.
+
+  Exception: /aiengjobs/ is a separate sub-site that does not (yet) ship its
+  own sitemap, so its landing page is listed directly here to keep it
+  crawlable. If that repo later adds /aiengjobs/sitemap.xml, move it to the
+  sitemap index and drop the entry below.
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
@@ -16,5 +21,11 @@
     <lastmod>2026-06-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://alastairrushworth.com/aiengjobs/</loc>
+    <lastmod>2026-06-26</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
