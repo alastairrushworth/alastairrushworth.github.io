@@ -2,10 +2,11 @@
 #
 # Crawlers only ever read robots.txt from the host root, so this single file
 # governs the entire domain — including the project sub-sites
-# (/stockscreen, /bootstrapfounders, /elements, /meditation), which live in
-# separate repos but are served under this domain. Any robots.txt those repos
-# ship at a sub-path is ignored by search engines; the sitemap index below is
-# what makes every section discoverable from one place.
+# (/stockscreen, /bootstrapfounders, /elements, /meditation,
+# /free-data-science, /inspectdf), which live in separate repos but are served
+# under this domain. Any robots.txt those repos ship at a sub-path is ignored
+# by search engines; the sitemap index below is what makes every section
+# discoverable from one place.
 
 User-agent: *
 Allow: /

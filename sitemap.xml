@@ -9,15 +9,16 @@
 
   - sitemap-pages.xml ......... pages owned by this root user-site repo.
   - <section>/sitemap.xml ..... each project site's self-maintained sitemap.
+
+  Only sections served from this host belong here. /aiengjobs/ moved to its own
+  domain (frontierroles.com) and now 301s there, so its sitemap is left to that
+  site — listing it here would cross-submit URLs on another host, which search
+  engines ignore.
 -->
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <sitemap>
     <loc>https://alastairrushworth.com/sitemap-pages.xml</loc>
     <lastmod>2026-06-25</lastmod>
-  </sitemap>
-  <sitemap>
-    <loc>https://alastairrushworth.com/aiengjobs/sitemap.xml</loc>
-    <lastmod>2026-06-27</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://alastairrushworth.com/bootstrapfounders/sitemap.xml</loc>
@@ -26,6 +27,10 @@
   <sitemap>
     <loc>https://alastairrushworth.com/elements/sitemap.xml</loc>
     <lastmod>2026-06-25</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://alastairrushworth.com/free-data-science/sitemap.xml</loc>
+    <lastmod>2026-07-27</lastmod>
   </sitemap>
   <sitemap>
     <loc>https://alastairrushworth.com/inspectdf/sitemap.xml</loc>

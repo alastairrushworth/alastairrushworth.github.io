@@ -4,10 +4,9 @@
   own sitemap (including /stockscreen/) are referenced from the sitemap index
   (sitemap.xml) instead of being duplicated here.
 
-  Exception: /aiengjobs/ is a separate sub-site that does not (yet) ship its
-  own sitemap, so its landing page is listed directly here to keep it
-  crawlable. If that repo later adds /aiengjobs/sitemap.xml, move it to the
-  sitemap index and drop the entry below.
+  Every <loc> below must be a page this host serves with a 200. /aiengjobs/
+  used to be listed here; it now 301s to frontierroles.com, so it was removed
+  rather than left as a redirecting entry.
 -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
@@ -21,11 +20,5 @@
     <lastmod>2026-06-25</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://alastairrushworth.com/aiengjobs/</loc>
-    <lastmod>2026-06-26</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.7</priority>
   </url>
 </urlset>
